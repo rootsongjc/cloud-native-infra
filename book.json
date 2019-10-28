@@ -25,7 +25,8 @@
         "theme-default",
         "-highlight", "prism", "prism-themes",
         "sitemap-general",
-        "ga"
+        "ga",
+        "lightbox"
     ],
     "pluginsConfig": {
         "github": {

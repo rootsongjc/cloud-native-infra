@@ -80,7 +80,7 @@
 
 ![Cloud Native Landscape](https://landscape.cncf.io/images/landscape.png)
 
-图P-1. CNCF景观
+图P-1. CNCF Landscape
 
 ## 致谢
 
