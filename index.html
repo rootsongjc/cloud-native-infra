@@ -1,0 +1,383 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>关于本书 · 云原生基础设施</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="宋净超（Jimmy Song）">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-ghcolors.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="foreword.html" />
+    
+    
+
+    
+        <link rel="shortcut icon" href='favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"rootsongjc/cloud-native-infra","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://jimmysong.io" target="_blank" class="custom-link">Jimmy Song</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://www.servicemesher.com" target="_blank" class="custom-link">ServiceMesher 社区</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://jimmysong.io/kubernetes-handbook/" target="_blank" class="custom-link">Kubernetes Handbook - Kubernetes中文指南/云原生应用架构实践手册 by Jimmy Song(宋净超)</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="foreword.html">
+            
+                <a href="foreword.html">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction.html">
+            
+                <a href="introduction.html">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="what-is-cloud-native-infrastructure.html">
+            
+                <a href="what-is-cloud-native-infrastructure.html">
+            
+                    
+                    第1章 什么是云原生基础架构？
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >关于本书</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4E91;&#x539F;&#x751F;&#x57FA;&#x7840;&#x67B6;&#x6784;">&#x4E91;&#x539F;&#x751F;&#x57FA;&#x7840;&#x67B6;&#x6784;</h1>
+<p>&#x300A;&#x4E91;&#x539F;&#x751F;&#x57FA;&#x7840;&#x67B6;&#x6784;&#x300B;&#x2014;&#x2014;Cloud Native Infrastructure &#x4E2D;&#x6587;&#x7248;&#x3002;</p>
+<p align="center">
+  <a href="https://jimmysong.io/cloud-native-infra" target="_blank">
+    <img src="cover.jpg" width="50%" height="50%" alt="&#x300A;&#x4E91;&#x539F;&#x751F;&#x57FA;&#x7840;&#x67B6;&#x6784;&#x300B;by Jimmy Song(&#x5B8B;&#x51C0;&#x8D85;&#xFF09;">
+  </a>
+</p>
+
+<p>&#x672C;&#x4E66;&#x4E3A;<em>Cloud Native Infrastructure</em>&#x4E2D;&#x6587;&#x7248;&#xFF0C;&#x4F5C;&#x8005;<em>Justin Garrison</em>&#x548C;<em>Kris Nova</em>&#xFF0C;&#x82F1;&#x6587;&#x7248;&#x53D1;&#x884C;&#x4E8E; 2017 &#x5E74; 11 &#x6708;&#xFF0C;&#x5DF2;&#x53EF;&#x4EE5;&#x5728;&#x7F51;&#x4E0A;&#x514D;&#x8D39;&#x83B7;&#x5F97;&#xFF0C;&#x672C;&#x4E66;&#x662F;&#x5173;&#x4E8E;&#x521B;&#x5EFA;&#x548C;&#x7BA1;&#x7406;&#x57FA;&#x7840;&#x67B6;&#x6784;&#xFF0C;&#x4EE5;&#x9002;&#x7528;&#x4E8E;&#x4E91;&#x539F;&#x751F;&#x5E94;&#x7528;&#x5168;&#x751F;&#x547D;&#x5468;&#x671F;&#x7BA1;&#x7406;&#x7684;&#x6A21;&#x5F0F;&#x548C;&#x5B9E;&#x8DF5;&#x3002;</p>
+<p>&#x9605;&#x8BFB;&#x5B8C;&#x8FD9;&#x672C;&#x4E66;&#x540E;&#xFF0C;&#x60A8;&#x5C06;&#x4F1A;&#x6709;&#x5982;&#x4E0B;&#x6536;&#x83B7;&#xFF1A;</p>
+<ul>
+<li>&#x7406;&#x89E3;&#x4E3A;&#x4EC0;&#x4E48;&#x8BF4;&#x4E91;&#x539F;&#x751F;&#x57FA;&#x7840;&#x67B6;&#x6784;&#x662F;&#x9AD8;&#x6548;&#x8FD0;&#x884C;&#x4E91;&#x539F;&#x751F;&#x5E94;&#x7528;&#x6240;&#x5FC5;&#x987B;&#x7684;</li>
+<li>&#x6839;&#x636E;&#x51C6;&#x5219;&#x6765;&#x51B3;&#x5B9A;&#x60A8;&#x7684;&#x4E1A;&#x52A1;&#x4F55;&#x65F6;&#x4EE5;&#x53CA;&#x662F;&#x5426;&#x5E94;&#x8BE5;&#x91C7;&#x7528;&#x4E91;&#x539F;&#x751F;</li>
+<li>&#x4E86;&#x89E3;&#x90E8;&#x7F72;&#x548C;&#x7BA1;&#x7406;&#x57FA;&#x7840;&#x67B6;&#x6784;&#x548C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x6A21;&#x5F0F;</li>
+<li>&#x8BBE;&#x8BA1;&#x6D4B;&#x8BD5;&#x4EE5;&#x8BC1;&#x660E;&#x60A8;&#x7684;&#x57FA;&#x7840;&#x67B6;&#x6784;&#x53EF;&#x4EE5;&#x6309;&#x9884;&#x671F;&#x5DE5;&#x4F5C;&#xFF0C;&#x5373;&#x4F7F;&#x5728;&#x5404;&#x79CD;&#x8FB9;&#x7F18;&#x60C5;&#x51B5;&#x4E0B;&#x4E5F;&#x662F;&#x5982;&#x6B64;</li>
+<li>&#x4E86;&#x89E3;&#x5982;&#x4F55;&#x4EE5;&#x7B56;&#x7565;&#x5373;&#x4EE3;&#x7801;&#x7684;&#x65B9;&#x5F0F;&#x4FDD;&#x62A4;&#x57FA;&#x7840;&#x67B6;&#x6784;</li>
+</ul>
+<h3 id="&#x4F7F;&#x7528;&#x65B9;&#x5F0F;">&#x4F7F;&#x7528;&#x65B9;&#x5F0F;</h3>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x65B9;&#x5F0F;&#x4F7F;&#x7528;&#x672C;&#x4E66;&#xFF1A;</p>
+<ul>
+<li>GitHub&#x5730;&#x5740;&#xFF1A;<a href="https://github.com/rootsongjc/cloud-native-infra" target="_blank">https://github.com/rootsongjc/cloud-native-infra</a></li>
+<li>GitBook&#x5728;&#x7EBF;&#x6D4F;&#x89C8;&#xFF1A;<a href="https://jimmysong.io/cloud-native-infra" target="_blank">https://jimmysong.io/cloud-native-infra</a></li>
+</ul>
+<p>&#x82F1;&#x6587;&#x539F;&#x7248;&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF1A;<a href="https://go.heptio.com/cloud-native-infrastructure" target="_blank">https://go.heptio.com/cloud-native-infrastructure</a></p>
+<h2 id="&#x9E23;&#x8C22;">&#x9E23;&#x8C22;</h2>
+<p>&#x672C;&#x4ED3;&#x5E93;&#x57FA;&#x4E8E; <a href="https://github.com/CloudNativeInfra/cni" target="_blank">https://github.com/CloudNativeInfra/cni</a> &#x7F16;&#x5199;&#xFF0C;&#x611F;&#x8C22;&#x539F;&#x4ED3;&#x5E93;&#x8D21;&#x732E;&#x8005;&#x7684;&#x5185;&#x5BB9;&#x7EC4;&#x7EC7;&#x548C;&#x7FFB;&#x8BD1;&#x3002;</p>
+<h2 id="license">License</h2>
+<p>&#x672C;&#x4E66;&#x82F1;&#x6587;&#x7248;&#x7248;&#x6743;&#x5C5E;&#x4E8E; O&#x2019;Reilly&#xFF0C;&#x4E2D;&#x6587;&#x7248;&#x7248;&#x6743;&#x5F52;&#x5C5E;&#x4E8E;&#x673A;&#x68B0;&#x5DE5;&#x4E1A;&#x51FA;&#x7248;&#xFF0C;&#x57FA;&#x4E8E;<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">&#x7F72;&#x540D;-&#x975E;&#x5546;&#x4E1A;&#x6027;&#x4F7F;&#x7528;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#xFF08;CC BY-NC-SA 4.0&#xFF09;</a>&#x5206;&#x4EAB;&#xFF0C;&#x672C;&#x4E66;&#x4E3A;&#x672C;&#x4EBA;&#x81EA;&#x884C;&#x7FFB;&#x8BD1;&#xFF0C;&#x76EE;&#x7684;&#x5728;&#x4E8E;&#x5B66;&#x4E60;&#x548C;&#x5DE9;&#x56FA;&#x4E91;&#x539F;&#x751F;&#x77E5;&#x8BC6;&#xFF0C;&#x5982;&#x6709;&#x9700;&#x8981;&#x8BF7;<a href="https://item.jd.com/12432007.html" target="_blank">&#x8D2D;&#x4E70;&#x7EB8;&#x8D28;&#x4E66;</a>&#x3002;</p>
+<p align="left">
+  <img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g7m9ofbzirj302g00vq2p.jpg" alt="CC4 License">
+</p>
+
+<h2 id="&#x793E;&#x533A;&#x8BFB;&#x8005;&#x4EA4;&#x6D41;">&#x793E;&#x533A;&amp;&#x8BFB;&#x8005;&#x4EA4;&#x6D41;</h2>
+<p><strong><a href="https://www.servicemesher.com/contact/" target="_blank">&#x52A0;&#x5165; ServiceMesher &#x793E;&#x533A;</a></strong>&#xFF1A;ServiceMesher &#x793E;&#x533A;&#x662F;&#x7531;&#x4E00;&#x7FA4;&#x62E5;&#x6709;&#x76F8;&#x540C;&#x4EF7;&#x503C;&#x89C2;&#x548C;&#x7406;&#x5FF5;&#x7684;&#x5FD7;&#x613F;&#x8005;&#x4EEC;&#x5171;&#x540C;&#x53D1;&#x8D77;&#xFF0C;&#x4E8E; 2018 &#x5E74; 4 &#x6708;&#x6B63;&#x5F0F;&#x6210;&#x7ACB;&#x3002;&#x793E;&#x533A;&#x5173;&#x6CE8;&#x9886;&#x57DF;&#x6709;&#xFF1A;&#x5BB9;&#x5668;&#x3001;&#x5FAE;&#x670D;&#x52A1;&#x3001;Service Mesh&#x3001;Serverless&#xFF0C;&#x62E5;&#x62B1;&#x5F00;&#x6E90;&#x548C;&#x4E91;&#x539F;&#x751F;&#x3002;</p>
+<p align="center">
+  <img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g7m9orx6cuj309k09kdfn.jpg" alt="ServiceMesher&#x5FAE;&#x4FE1;&#x516C;&#x4F17;&#x53F7;&#x4E8C;&#x7EF4;&#x7801;">
+</p> 
+
+<footer class="page-footer"><span class="copyright"><p><a href="http://gk.link/a/104bw" target="_blank">&#x6781;&#x5BA2;&#x65F6;&#x95F4;&#xB7;&#x4E13;&#x4EAB;&#x798F;&#x5229;&#x901A;&#x9053;&#xFF1A;199&#x5143;&#x793C;&#x5305;&#x9650;&#x65F6;&#x653E;&#x9001;</a> | <a href="https://ws1.sinaimg.cn/large/006tNbRwly1fw3l1sxoijj304g0563z7.jpg" data-lightbox="2fd927ee-fa64-4eca-8ed5-6bd72b573a3c" target="_blank">&#x70B9;&#x51FB;&#x5173;&#x6CE8;&#x3010;ServiceMesher&#x3011; &#x5FAE;&#x4FE1;&#x516C;&#x4F17;&#x53F7;&#x56DE;&#x590D;&#x3010;&#x52A0;&#x7FA4;&#x3011;&#x52A0;&#x5165;&#x5B66;&#x4E60;&#x7FA4;</a></p>Copyright &#xA9; <a href="https://jimmysong.io" target="_blank">jimmysong.io</a> 2018-2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification"> Updated at 
+2019-10-28 22:15:44
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="foreword.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 前言">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"关于本书","level":"1.1","depth":1,"next":{"title":"前言","level":"1.2","depth":1,"path":"foreword.md","ref":"foreword.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","codesnippet","splitter","page-toc-button","editlink","back-to-top-button","-lunr","-search","search-plus","github-buttons@2.1.0","favicon@^0.0.2","tbfed-pagefooter@^0.0.1","3-ba","theme-default","-highlight","prism","prism-themes","sitemap-general","ga"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"<p><a href=http://gk.link/a/104bw>极客时间·专享福利通道：199元礼包限时放送</a> | <a href=https://ws1.sinaimg.cn/large/006tNbRwly1fw3l1sxoijj304g0563z7.jpg data-lightbox=2fd927ee-fa64-4eca-8ed5-6bd72b573a3c>点击关注【ServiceMesher】 微信公众号回复【加群】加入学习群</a></p>Copyright © <a href=https://jimmysong.io>jimmysong.io</a> 2018-2019","modify_label":" Updated at ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-ghcolors.css"]},"github":{"url":"https://github.com/rootsongjc/cloud-native-infra"},"editlink":{"label":"编辑此页","multilingual":false,"base":"https://github.com/rootsongjc/cloud-native-infra/blob/master"},"splitter":{},"codesnippet":{},"sitemap-general":{"prefix":"https://jimmysong.io/cloud-native-infra"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"github-buttons":{"repo":"rootsongjc/cloud-native-infra","types":["star"],"size":"small"},"3-ba":{"configuration":"auto","token":"11f7d254cfa4e0ca44b175c66d379ecc"},"ga":{"configuration":"auto","token":"UA-93485976-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"search-plus":{},"image-captions":{"caption":"图片 - _CAPTION_"}},"theme":"default","author":"宋净超（Jimmy Song）","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"云原生基础设施","language":"zh-hans","links":{"sidebar":{"Jimmy Song":"https://jimmysong.io","ServiceMesher 社区":"https://www.servicemesher.com","Kubernetes Handbook - Kubernetes中文指南/云原生应用架构实践手册 by Jimmy Song(宋净超)":"https://jimmysong.io/kubernetes-handbook/"}},"gitbook":"*","description":"《云原生基础设施》|Cloud Native Infrastructure 中文版"},"file":{"path":"README.md","mtime":"2019-10-28T14:15:44.880Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-28T14:16:43.140Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

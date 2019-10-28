@@ -1,0 +1,406 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>介绍 · 云原生基础设施</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="宋净超（Jimmy Song）">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-ghcolors.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="what-is-cloud-native-infrastructure.html" />
+    
+    
+    <link rel="prev" href="foreword.html" />
+    
+
+    
+        <link rel="shortcut icon" href='favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"rootsongjc/cloud-native-infra","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://jimmysong.io" target="_blank" class="custom-link">Jimmy Song</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://www.servicemesher.com" target="_blank" class="custom-link">ServiceMesher 社区</a>
+        </li>
+    
+        
+        <li>
+            <a href="https://jimmysong.io/kubernetes-handbook/" target="_blank" class="custom-link">Kubernetes Handbook - Kubernetes中文指南/云原生应用架构实践手册 by Jimmy Song(宋净超)</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="foreword.html">
+            
+                <a href="foreword.html">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="introduction.html">
+            
+                <a href="introduction.html">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="what-is-cloud-native-infrastructure.html">
+            
+                <a href="what-is-cloud-native-infrastructure.html">
+            
+                    
+                    第1章 什么是云原生基础架构？
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >介绍</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4ECB;&#x7ECD;">&#x4ECB;&#x7ECD;</h1>
+<p>&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x6280;&#x672F;&#x7684;&#x5386;&#x53F2;&#x5411;&#x6765;&#x5F15;&#x4EBA;&#x5165;&#x80DC;&#x3002;&#x7531;&#x4E8E;&#x8981;&#x6C42;&#x4EE5;&#x5DE8;&#x5927;&#x7684;&#x89C4;&#x6A21;&#x7ECF;&#x8425;&#xFF0C;&#x5B83;&#x5DF2;&#x7ECF;&#x7ECF;&#x5386;&#x4E86;&#x4E00;&#x6B21;&#x5FEB;&#x901F;&#x7684;&#x98A0;&#x8986;&#x6027;&#x53D8;&#x9769;&#x3002;&#x9664;&#x4E86;&#x8BA1;&#x7B97;&#x673A;&#x548C;&#x4E92;&#x8054;&#x7F51;&#x7684;&#x65E9;&#x671F;&#xFF0C;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x521B;&#x65B0;&#x7684;&#x6B65;&#x4F10;&#x662F;&#x65E0;&#x4E0E;&#x4F26;&#x6BD4;&#x7684;&#x3002;&#x8FD9;&#x4E9B;&#x521B;&#x65B0;&#x4F7F;&#x57FA;&#x7840;&#x67B6;&#x6784;&#x66F4;&#x5FEB;&#xFF0C;&#x66F4;&#x53EF;&#x9760;&#xFF0C;&#x66F4;&#x6709;&#x4EF7;&#x503C;&#x3002;</p>
+<p>&#x6709;&#x4E9B;&#x516C;&#x53F8;&#x7684;&#x4EBA;&#x5C06;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x63A8;&#x5230;&#x4E86;&#x6781;&#x9650;&#xFF0C;&#x4ED6;&#x4EEC;&#x5DF2;&#x7ECF;&#x627E;&#x5230;&#x4E86;&#x81EA;&#x52A8;&#x5316;&#x548C;&#x62BD;&#x8C61;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x63D0;&#x53D6;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x66F4;&#x591A;&#x5546;&#x4E1A;&#x4EF7;&#x503C;&#x3002;&#x901A;&#x8FC7;&#x63D0;&#x4F9B;&#x7075;&#x6D3B;&#x7684;&#x53EF;&#x7528;&#x8D44;&#x6E90;&#xFF0C;&#x4ED6;&#x4EEC;&#x5C06;&#x66FE;&#x7ECF;&#x662F;&#x6602;&#x8D35;&#x7684;&#x6210;&#x672C;&#x4E2D;&#x5FC3;&#x8F6C;&#x53D8;&#x4E3A;&#x6240;&#x9700;&#x7684;&#x5546;&#x4E1A;&#x516C;&#x7528;&#x4E8B;&#x4E1A;&#x3002;</p>
+<p>&#x7136;&#x800C;&#xFF0C;&#x516C;&#x7528;&#x4E8B;&#x4E1A;&#x516C;&#x53F8;&#x5F88;&#x5C11;&#x4E3A;&#x4F01;&#x4E1A;&#x63D0;&#x4F9B;&#x8D22;&#x52A1;&#x4EF7;&#x503C;&#xFF0C;&#x8FD9;&#x610F;&#x5473;&#x7740;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x5F80;&#x5F80;&#x88AB;&#x5FFD;&#x7565;&#x5E76;&#x88AB;&#x89C6;&#x4E3A;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x6210;&#x672C;&#x3002;&#x8FD9;&#x4F7F;&#x5F97;&#x6295;&#x5165;&#x521B;&#x65B0;&#x6216;&#x6539;&#x8FDB;&#x7684;&#x65F6;&#x95F4;&#x548C;&#x91D1;&#x94B1;&#x5F88;&#x5C11;&#x3002;</p>
+<p>&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x5982;&#x6B64;&#x7B80;&#x5355;&#x4E14;&#x4EE4;&#x4EBA;&#x7740;&#x8FF7;&#x7684;&#x4E1A;&#x52A1;&#x5806;&#x6808;&#x5982;&#x4F55;&#x88AB;&#x8F7B;&#x6613;&#x5FFD;&#x7565;&#xFF1F;&#x5F53;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x51FA;&#x73B0;&#x6545;&#x969C;&#x65F6;&#xFF0C;&#x4E1A;&#x52A1;&#x663E;&#x7136;&#x4F1A;&#x53D7;&#x5230;&#x91CD;&#x89C6;&#xFF0C;&#x90A3;&#x4E48;&#x4E3A;&#x4EC0;&#x4E48;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x5F88;&#x96BE;&#x6539;&#x5584;&#x5462;&#xFF1F;</p>
+<p>&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x5DF2;&#x7ECF;&#x8FBE;&#x5230;&#x4E86;&#x4F7F;&#x6D88;&#x8D39;&#x8005;&#x90FD;&#x611F;&#x5230;&#x65E0;&#x804A;&#x7684;&#x6210;&#x719F;&#x5EA6;&#x3002;&#x7136;&#x800C;&#xFF0C;&#x5B83;&#x7684;&#x6F5C;&#x529B;&#x548C;&#x65B0;&#x6311;&#x6218;&#x53C8;&#x6FC0;&#x53D1;&#x4E86;&#x5B9E;&#x65BD;&#x8005;&#x548C;&#x5DE5;&#x7A0B;&#x5E08;&#x4EEC;&#x65B0;&#x7684;&#x6FC0;&#x60C5;&#x3002;</p>
+<p>&#x6269;&#x5C55;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x5E76;&#x4F7F;&#x7528;&#x65B0;&#x7684;&#x4E1A;&#x52A1;&#x65B9;&#x5F0F;&#x8BA9;&#x6765;&#x81EA;&#x4E0D;&#x540C;&#x884C;&#x4E1A;&#x7684;&#x5DE5;&#x7A0B;&#x5E08;&#x90FD;&#x80FD;&#x627E;&#x5230;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;&#x5F00;&#x6E90;&#x8F6F;&#x4EF6;&#xFF08;OSS&#xFF09;&#x548C;&#x793E;&#x533A;&#x95F4;&#x7684;&#x4E92;&#x76F8;&#x534F;&#x4F5C;&#xFF0C;&#x8FD9;&#x80A1;&#x529B;&#x91CF;&#x53C8;&#x4FC3;&#x4F7F;&#x4E86;&#x521B;&#x65B0;&#x7684;&#x6FC0;&#x589E;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x7BA1;&#x7406;&#x5F97;&#x5F53;&#xFF0C;&#x4ECA;&#x5929;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x548C;&#x5E94;&#x7528;&#x65B9;&#x9762;&#x7684;&#x6311;&#x6218;&#x5C06;&#x4F1A;&#x4E0D;&#x4E00;&#x6837;&#x3002;&#x8FD9;&#x4F7F;&#x5F97;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x5EFA;&#x8BBE;&#x8005;&#x548C;&#x7EF4;&#x62A4;&#x4EBA;&#x5458;&#x53EF;&#x4EE5;&#x53D6;&#x5F97;&#x8FDB;&#x5C55;&#x5E76;&#x5F00;&#x5C55;&#x65B0;&#x7684;&#x6709;&#x610F;&#x4E49;&#x7684;&#x5DE5;&#x4F5C;&#x3002;</p>
+<p>&#x6709;&#x4E9B;&#x516C;&#x53F8;&#x514B;&#x670D;&#x4E86;&#x8BF8;&#x5982;&#x53EF;&#x6269;&#x5C55;&#x6027;&#x3001;&#x53EF;&#x9760;&#x6027;&#x548C;&#x7075;&#x6D3B;&#x6027;&#x7B49;&#x6311;&#x6218;&#x3002;&#x4ED6;&#x4EEC;&#x521B;&#x5EFA;&#x5E76;&#x5C01;&#x88C5;&#x4E86;&#x4E00;&#x4E9B;&#x9879;&#x76EE;&#xFF0C;&#x8FD9;&#x9879;&#x9879;&#x76EE;&#x4E2D;&#x5C01;&#x88C5;&#x4E86;&#x53EF;&#x4F9B;&#x4ED6;&#x4EBA;&#x9075;&#x5FAA;&#x7684;&#x6A21;&#x5F0F;&#x3002;&#x8FD9;&#x4E9B;&#x6A21;&#x5F0F;&#x6709;&#x65F6;&#x5F88;&#x5BB9;&#x6613;&#x88AB;&#x5B9E;&#x73B0;&#x8005;&#x53D1;&#x73B0;&#xFF0C;&#x4F46;&#x5728;&#x5176;&#x4ED6;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5B83;&#x4EEC;&#x4E0D;&#x592A;&#x660E;&#x663E;&#x3002;</p>
+<p>&#x5728;&#x672C;&#x4E66;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5206;&#x4EAB;&#x6765;&#x81EA;&#x4E91;&#x539F;&#x751F;&#x6280;&#x672F;&#x524D;&#x6CBF;&#x7684;&#x516C;&#x53F8;&#x7684;&#x7ECF;&#x9A8C;&#x6559;&#x8BAD;&#xFF0C;&#x4F7F;&#x60A8;&#x80FD;&#x591F;&#x6709;&#x6548;&#x89E3;&#x51B3;&#x53EF;&#x9760;&#x8FD0;&#x884C;&#x53EF;&#x4F38;&#x7F29;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x95EE;&#x9898;&#x3002;&#x73B0;&#x4EE3;&#x5546;&#x4E1A;&#x53D1;&#x5C55;&#x975E;&#x5E38;&#x8FC5;&#x901F;&#x3002;&#x672C;&#x4E66;&#x4E2D;&#x7684;&#x6A21;&#x5F0F;&#x5C06;&#x4F7F;&#x60A8;&#x7684;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x80FD;&#x591F;&#x8DDF;&#x4E0A;&#x4E1A;&#x52A1;&#x7684;&#x901F;&#x5EA6;&#x548C;&#x654F;&#x6377;&#x6027;&#x9700;&#x6C42;&#x3002;&#x66F4;&#x91CD;&#x8981;&#x7684;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x8BA9;&#x60A8;&#x81EA;&#x884C;&#x51B3;&#x5B9A;&#x4F55;&#x65F6;&#x91C7;&#x7528;&#x8FD9;&#x4E9B;&#x6A21;&#x5F0F;&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x6A21;&#x5F0F;&#x4E2D;&#x6709;&#x5F88;&#x591A;&#x90FD;&#x5DF2;&#x7ECF;&#x5728;&#x5F00;&#x6E90;&#x9879;&#x76EE;&#x4E2D;&#x5F97;&#x5230;&#x4E86;&#x4F53;&#x73B0;&#x3002;&#x5176;&#x4E2D;&#x4E00;&#x4E9B;&#x9879;&#x76EE;&#x7531;&#x4E91;&#x539F;&#x751F;&#x8BA1;&#x7B97;&#x57FA;&#x91D1;&#x4F1A;&#xFF08;CNCF&#xFF09;&#x7EF4;&#x62A4;&#x3002;&#x8FD9;&#x4E9B;&#x9879;&#x76EE;&#x548C;&#x57FA;&#x91D1;&#x4F1A;&#x5E76;&#x4E0D;&#x662F;&#x6A21;&#x5F0F;&#x7684;&#x552F;&#x4E00;&#x4F53;&#x73B0;&#xFF0C;&#x4F46;&#x5FFD;&#x89C6;&#x5B83;&#x4EEC;&#x4F1A;&#x8BA9;&#x4F60;&#x5931;&#x53BB;&#x7406;&#x667A;&#x3002;&#x4EE5;&#x5B83;&#x4EEC;&#x4E3A;&#x4F8B;&#xFF0C;&#x4F46;&#x8981;&#x81EA;&#x5DF1;&#x8FDB;&#x884C;&#x5C3D;&#x804C;&#x8C03;&#x67E5;&#xFF0C;&#x4EE5;&#x5BA1;&#x6838;&#x60A8;&#x6240;&#x91C7;&#x7528;&#x7684;&#x6BCF;&#x4E2A;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5C06;&#x5411;&#x60A8;&#x5C55;&#x793A;&#x4E91;&#x539F;&#x751F;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x7684;&#x76CA;&#x5904;&#x4EE5;&#x53CA;&#x53EF;&#x6269;&#x5C55;&#x7CFB;&#x7EDF;&#x548C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x57FA;&#x672C;&#x6A21;&#x5F0F;&#x3002;&#x6211;&#x4EEC;&#x5C06;&#x5411;&#x60A8;&#x5C55;&#x793A;&#x5982;&#x4F55;&#x6D4B;&#x8BD5;&#x60A8;&#x7684;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#xFF0C;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x9002;&#x5E94;&#x60A8;&#x9700;&#x6C42;&#x7684;&#x7075;&#x6D3B;&#x7684;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x3002;&#x60A8;&#x5C06;&#x4E86;&#x89E3;&#x54EA;&#x4E9B;&#x65B9;&#x9762;&#x662F;&#x91CD;&#x8981;&#x7684;&#x4EE5;&#x53CA;&#x63A5;&#x4E0B;&#x6765;&#x4F1A;&#x53D1;&#x751F;&#x4EC0;&#x4E48;&#x4E8B;&#x60C5;&#x3002;</p>
+<p>&#x8FD9;&#x672C;&#x4E66;&#x53EF;&#x4EE5;&#x6FC0;&#x52B1;&#x4F60;&#x7EE7;&#x7EED;&#x524D;&#x8FDB;&#x5E76;&#x81EA;&#x7531;&#x5206;&#x4EAB;&#x4F60;&#x5728;&#x793E;&#x533A;&#x4E2D;&#x5B66;&#x5230;&#x7684;&#x77E5;&#x8BC6;&#x3002;</p>
+<h2 id="&#x8C01;&#x5E94;&#x8BE5;&#x8BFB;&#x8FD9;&#x672C;&#x4E66;">&#x8C01;&#x5E94;&#x8BE5;&#x8BFB;&#x8FD9;&#x672C;&#x4E66;</h2>
+<p>&#x5982;&#x679C;&#x60A8;&#x662F;&#x5F00;&#x53D1;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x6216;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x7684;&#x5DE5;&#x7A0B;&#x5E08;&#xFF0C;&#x90A3;&#x4E48;&#x672C;&#x4E66;&#x5C31;&#x662F;&#x4E3A;&#x60A8;&#x51C6;&#x5907;&#x7684;&#x3002;&#x672C;&#x4E66;&#x5C06;&#x5E2E;&#x52A9;&#x60A8;&#x4E86;&#x89E3;&#x521B;&#x5EFA;&#x65E8;&#x5728;&#x5728;&#x4E91;&#x73AF;&#x5883;&#x4E2D;&#x8FD0;&#x884C;&#x7684;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x7684;&#x6A21;&#x5F0F;&#x3001;&#x6D41;&#x7A0B;&#x548C;&#x5B9E;&#x8DF5;&#x3002;&#x901A;&#x8FC7;&#x4E86;&#x89E3;&#x5E94;&#x8BE5;&#x600E;&#x4E48;&#x505A;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x66F4;&#x597D;&#x5730;&#x4E86;&#x89E3;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x4EE5;&#x53CA;&#x5E94;&#x8BE5;&#x4F55;&#x65F6;&#x6784;&#x5EFA;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x6216;&#x4F7F;&#x7528;&#x4E91;&#x670D;&#x52A1;&#x3002;</p>
+<p>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5DE5;&#x7A0B;&#x5E08;&#x4ECE;&#x672C;&#x4E66;&#x4E2D;&#x8FD8;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#x54EA;&#x4E9B;&#x670D;&#x52A1;&#x5E94;&#x8BE5;&#x662F;&#x5176;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x54EA;&#x4E9B;&#x670D;&#x52A1;&#x5E94;&#x8BE5;&#x7531;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x63D0;&#x4F9B;&#x3002;&#x901A;&#x8FC7;&#x672C;&#x4E66;&#xFF0C;&#x4ED6;&#x4EEC;&#x8FD8;&#x4F1A;&#x53D1;&#x73B0;&#x4ED6;&#x4EEC;&#x5E94;&#x8BE5;&#x4E0E;&#x7F16;&#x5199;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7BA1;&#x7406;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x7684;&#x5DE5;&#x7A0B;&#x5E08;&#x5171;&#x540C;&#x627F;&#x62C5;&#x7684;&#x8D23;&#x4EFB;&#x3002;</p>
+<p>&#x5E0C;&#x671B;&#x63D0;&#x5347;&#x6280;&#x80FD;&#x5E76;&#x7CFB;&#x7EDF;&#x5730;&#x5728;&#x8BBE;&#x8BA1;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x548C;&#x7EF4;&#x62A4;&#x4E91;&#x7F51;&#x5173;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x65B9;&#x9762;&#x53D1;&#x6325;&#x66F4;&#x5927;&#x4F5C;&#x7528;&#x7684;&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;&#x5458;&#x4E5F;&#x53EF;&#x4EE5;&#x4ECE;&#x672C;&#x4E66;&#x4E2D;&#x5B66;&#x5230;&#x5F88;&#x591A;&#x3002;</p>
+<p>&#x4F60;&#x662F;&#x5426;&#x5728;&#x516C;&#x6709;&#x4E91;&#x4E2D;&#x8FD0;&#x884C;&#x6240;&#x6709;&#x7684;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#xFF1F;&#x672C;&#x4E66;&#x5C06;&#x5E2E;&#x52A9;&#x60A8;&#x4E86;&#x89E3;&#x4F55;&#x65F6;&#x4F7F;&#x7528;&#x4E91;&#x670D;&#x52A1;&#x4EE5;&#x53CA;&#x4F55;&#x65F6;&#x6784;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;&#x62BD;&#x8C61;&#x6216;&#x670D;&#x52A1;&#x3002;</p>
+<p>&#x8FD0;&#x884C;&#x5728;&#x6570;&#x636E;&#x4E2D;&#x5FC3;&#x8FD8;&#x662F;&#x672C;&#x5730;&#x4E91;&#xFF1F;&#x6211;&#x4EEC;&#x5C06;&#x6982;&#x8FF0;&#x73B0;&#x4EE3;&#x5E94;&#x7528;&#x5BF9;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x7684;&#x671F;&#x671B;&#xFF0C;&#x5E76;&#x5C06;&#x5E2E;&#x52A9;&#x60A8;&#x4E86;&#x89E3;&#x5229;&#x7528;&#x5F53;&#x524D;&#x6295;&#x8D44;&#x7684;&#x5FC5;&#x8981;&#x670D;&#x52A1;&#x3002;</p>
+<p>&#x8FD9;&#x672C;&#x4E66;&#x4E0D;&#x662F;&#x4E00;&#x672C;&#x6559;&#x7A0B;&#xFF0C;&#x9664;&#x4E86;&#x7ED9;&#x51FA;&#x5B9E;&#x73B0;&#x793A;&#x4F8B;&#x4E4B;&#x5916;&#xFF0C;&#x6211;&#x4EEC;&#x6CA1;&#x6709;&#x6307;&#x51FA;&#x7279;&#x5B9A;&#x7684;&#x4EA7;&#x54C1;&#x3002;&#x5BF9;&#x4E8E;&#x7ECF;&#x7406;&#x3001;&#x8463;&#x4E8B;&#x548C;&#x9AD8;&#x7BA1;&#x6765;&#x8BF4;&#xFF0C;&#x8FD9;&#x53EF;&#x80FD;&#x592A;&#x8FC7;&#x6280;&#x672F;&#x6027;&#xFF0C;&#x4F46;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x6240;&#x5E2E;&#x52A9;&#xFF0C;&#x5177;&#x4F53;&#x53D6;&#x51B3;&#x4E8E;&#x8BE5;&#x89D2;&#x8272;&#x7684;&#x53C2;&#x4E0E;&#x548C;&#x6280;&#x672F;&#x4E13;&#x957F;&#x3002;</p>
+<p>&#x6700;&#x91CD;&#x8981;&#x7684;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x60F3;&#x4E86;&#x89E3;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x5982;&#x4F55;&#x5F71;&#x54CD;&#x4E1A;&#x52A1;&#xFF0C;&#x8BF7;&#x9605;&#x8BFB;&#x672C;&#x4E66;&#xFF0C;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x7ECF;&#x8BC1;&#x5B9E;&#x53EF;&#x4E3A;&#x5177;&#x5907;&#x5168;&#x7403;&#x4E92;&#x8054;&#x7F51;&#x89C4;&#x6A21;&#x8FD0;&#x8425;&#x7684;&#x4F01;&#x4E1A;&#x5DE5;&#x4F5C;&#x7684;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x3002;&#x5373;&#x4F7F;&#x60A8;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E0D;&#x9700;&#x8981;&#x6269;&#x5C55;&#x5230;&#x8FD9;&#x79CD;&#x89C4;&#x6A21;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x7684;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x662F;&#x4F7F;&#x7528;&#x6B64;&#x5904;&#x63CF;&#x8FF0;&#x7684;&#x6A21;&#x5F0F;&#x6784;&#x5EFA;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x8003;&#x8651;&#x5230;&#x7075;&#x6D3B;&#x6027;&#x548C;&#x53EF;&#x64CD;&#x4F5C;&#x6027;&#xFF0C;&#x8FD9;&#x672C;&#x4E66;&#x4ECD;&#x7136;&#x503C;&#x5F97;&#x4E00;&#x8BFB;&#x3002;</p>
+<h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x6211;&#x4EEC;&#x5199;&#x4E86;&#x8FD9;&#x672C;&#x4E66;">&#x4E3A;&#x4EC0;&#x4E48;&#x6211;&#x4EEC;&#x5199;&#x4E86;&#x8FD9;&#x672C;&#x4E66;</h2>
+<p>&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x901A;&#x8FC7;&#x4E13;&#x6CE8;&#x4E8E;&#x6A21;&#x5F0F;&#x548C;&#x5B9E;&#x8DF5;&#x800C;&#x4E0D;&#x662F;&#x7279;&#x5B9A;&#x4EA7;&#x54C1;&#x548C;&#x4F9B;&#x5E94;&#x5546;&#x6765;&#x5E2E;&#x52A9;&#x60A8;&#x4E86;&#x89E3;&#x3002;&#x5F53;&#x524D;&#x5B58;&#x5728;&#x592A;&#x591A;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x800C;&#x4E0D;&#x4E86;&#x89E3;&#x5B83;&#x4EEC;&#x672C;&#x8EAB;&#x5230;&#x5E95;&#x8981;&#x89E3;&#x51B3;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x76F8;&#x4FE1;&#x901A;&#x8FC7;&#x4E91;&#x539F;&#x751F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7BA1;&#x7406;&#x4E91;&#x539F;&#x751F;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x7684;&#x597D;&#x5904;&#xFF0C;&#x5E76;&#x4E14;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x6240;&#x6709;&#x4EBA;&#x90FD;&#x5177;&#x6709;&#x8FD9;&#x79CD;&#x610F;&#x8BC6;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x56DE;&#x9988;&#x793E;&#x533A;&#xFF0C;&#x63A8;&#x52A8;&#x884C;&#x4E1A;&#x5411;&#x524D;&#x53D1;&#x5C55;&#x3002;&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x8FD9;&#x6837;&#x505A;&#x7684;&#x6700;&#x597D;&#x65B9;&#x5F0F;&#x662F;&#x89E3;&#x91CA;&#x4E1A;&#x52A1;&#x548C;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x9610;&#x660E;&#x95EE;&#x9898;&#x5E76;&#x89E3;&#x91CA;&#x53D1;&#x73B0;&#x5B83;&#x4EEC;&#x7684;&#x5DE5;&#x7A0B;&#x5E08;&#x548C;&#x7EC4;&#x7EC7;&#x6240;&#x505A;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x3002;</p>
+<p>&#x4EE5;&#x4E0D;&#x6D89;&#x53CA;&#x4EA7;&#x54C1;&#x7684;&#x65B9;&#x5F0F;&#x89E3;&#x91CA;&#x6A21;&#x5F0F;&#x5E76;&#x4E0D;&#x603B;&#x662F;&#x5F88;&#x5BB9;&#x6613;&#xFF0C;&#x4F46;&#x4E86;&#x89E3;&#x4EA7;&#x54C1;&#x5B58;&#x5728;&#x7684;&#x539F;&#x56E0;&#x5F88;&#x91CD;&#x8981;&#x3002;&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x4F7F;&#x7528;&#x4EA7;&#x54C1;&#x4F5C;&#x4E3A;&#x6A21;&#x5F0F;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x4F46;&#x53EA;&#x6709;&#x5F53;&#x5B83;&#x4EEC;&#x4F1A;&#x5E2E;&#x52A9;&#x60A8;&#x63D0;&#x4F9B;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x7684;&#x5B9E;&#x65BD;&#x793A;&#x4F8B;&#x65F6;&#x624D;&#x4F1A;&#x63D0;&#x5230;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x65E0;&#x6570;&#x4EBA;&#x6570;&#x4E07;&#x5C0F;&#x65F6;&#x7684;&#x81EA;&#x613F;&#x7F16;&#x5199;&#x4EE3;&#x7801;&#xFF0C;&#x5E2E;&#x52A9;&#x4ED6;&#x4EBA;&#x4EE5;&#x53CA;&#x6295;&#x8D44;&#x793E;&#x533A;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x4E0D;&#x4F1A;&#x8D70;&#x5230;&#x8FD9;&#x91CC;&#x3002;&#x6211;&#x4EEC;&#x975E;&#x5E38;&#x611F;&#x8C22;&#x90A3;&#x4E9B;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x4E86;&#x89E3;&#x8FD9;&#x4E9B;&#x6A21;&#x5F0F;&#x7684;&#x4EBA;&#x4EEC;&#xFF0C;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x80FD;&#x591F;&#x56DE;&#x9988;&#x5E76;&#x5E2E;&#x52A9;&#x4E0B;&#x4E00;&#x4EE3;&#x5DE5;&#x7A0B;&#x5E08;&#x3002;&#x8FD9;&#x672C;&#x4E66;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x8868;&#x8FBE;&#x8C22;&#x610F;&#x7684;&#x65B9;&#x5F0F;&#x3002;</p>
+<h2 id="&#x6D4F;&#x89C8;&#x672C;&#x4E66;">&#x6D4F;&#x89C8;&#x672C;&#x4E66;</h2>
+<p>&#x672C;&#x4E66;&#x7684;&#x7EC4;&#x7EC7;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>&#x7B2C;1&#x7AE0;&#x4ECB;&#x7ECD;&#x4E91;&#x539F;&#x751F;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x662F;&#x4EC0;&#x4E48;&#x4EE5;&#x53CA;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x8D70;&#x5230;&#x5F53;&#x524D;&#x8FD9;&#x4E00;&#x6B65;&#x3002;</li>
+<li>&#x7B2C;2&#x7AE0;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x60A8;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x4EE5;&#x53CA;&#x4F55;&#x65F6;&#x91C7;&#x7528;&#x540E;&#x9762;&#x7AE0;&#x8282;&#x4E2D;&#x9884;&#x5148;&#x63CF;&#x8FF0;&#x7684;&#x6A21;&#x5F0F;&#x3002;</li>
+<li>&#x7B2C;3&#x7AE0;&#x548C;&#x7B2C;4&#x7AE0;&#x5C55;&#x793A;&#x4E86;&#x5E94;&#x8BE5;&#x5982;&#x4F55;&#x90E8;&#x7F72;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x7F16;&#x5199;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6765;&#x7BA1;&#x7406;&#x5B83;&#x3002;</li>
+<li>&#x7B2C;5&#x7AE0;&#x5C06;&#x6559;&#x4F60;&#x5982;&#x4F55;&#x4ECE;&#x6D4B;&#x8BD5;&#x5F00;&#x59CB;&#x5C31;&#x8BBE;&#x8BA1;&#x53EF;&#x9760;&#x7684;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x3002;</li>
+<li>&#x7B2C;6&#x7AE0;&#x548C;&#x7B2C;7&#x7AE0;&#x5C55;&#x793A;&#x4E86;&#x5982;&#x4F55;&#x7BA1;&#x7406;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x548C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</li>
+<li>&#x7B2C;8&#x7AE0;&#x603B;&#x7ED3;&#x5E76;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x6709;&#x5173;&#x672A;&#x6765;&#x53D1;&#x5C55;&#x7684;&#x89C1;&#x89E3;&#x3002;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x4F60;&#x50CF;&#x6211;&#x4EEC;&#x4E00;&#x6837;&#xFF0C;&#x4F60;&#x4E0D;&#x4F1A;&#x4ECE;&#x524D;&#x5230;&#x540E;&#x5B8C;&#x6574;&#x770B;&#x5B8C;&#x672C;&#x4E66;&#x3002;&#x4EE5;&#x4E0B;&#x662F;&#x5173;&#x4E8E;&#x672C;&#x4E66;&#x4E3B;&#x9898;&#x7684;&#x4E00;&#x4E9B;&#x5EFA;&#x8BAE;&#xFF1A;</p>
+<ul>
+<li>&#x5982;&#x679C;&#x60A8;&#x662F;&#x4E00;&#x4F4D;&#x4E13;&#x6CE8;&#x4E8E;&#x521B;&#x5EFA;&#x548C;&#x7EF4;&#x62A4;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x7684;&#x5DE5;&#x7A0B;&#x5E08;&#xFF0C;&#x60A8;&#x5E94;&#x8BE5;&#x81F3;&#x5C11;&#x9605;&#x8BFB;&#x7B2C;3&#x7AE0;&#x81F3;&#x7B2C;6&#x7AE0;&#x3002;</li>
+<li>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x53EF;&#x4EE5;&#x4E13;&#x6CE8;&#x4E8E;&#x7B2C;4&#x3001;5&#x548C;7&#x7AE0;&#x5173;&#x4E8E;&#x5C06;&#x57FA;&#x7840;&#x67B6;&#x6784;&#x5DE5;&#x5177;&#x5F00;&#x53D1;&#x4E3A;&#x4E91;&#x539F;&#x751F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</li>
+<li>&#x6240;&#x6709;&#x4E0D;&#x6784;&#x5EFA;&#x4E91;&#x539F;&#x751F;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x7684;&#x4EBA;&#x90FD;&#x5C06;&#x4ECE;&#x7B2C;1&#x3001;2&#x3001;8&#x7AE0;&#x4E2D;&#x53D7;&#x76CA;&#x532A;&#x6D45;&#x3002;</li>
+</ul>
+<h2 id="&#x5728;&#x7EBF;&#x8D44;&#x6E90;">&#x5728;&#x7EBF;&#x8D44;&#x6E90;</h2>
+<p>&#x60A8;&#x5E94;&#x8BE5;&#x901A;&#x8FC7;&#x8BBF;&#x95EE;CNCF&#x7F51;&#x7AD9;&#x719F;&#x6089;&#x4E91;&#x539F;&#x751F;&#x8BA1;&#x7B97;&#x57FA;&#x91D1;&#x4F1A;&#xFF08;CNCF&#xFF09;&#x53CA;&#x5176;&#x6258;&#x7BA1;&#x9879;&#x76EE;&#x3002;&#x672C;&#x4E66;&#x4E2D;&#x7684;&#x8BB8;&#x591A;&#x9879;&#x76EE;&#x90FD;&#x88AB;&#x7528;&#x4F5C;&#x793A;&#x4F8B;&#x3002;</p>
+<p>&#x60A8;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x67E5;&#x770B;CNCF&#x666F;&#x89C2;&#x9879;&#x76EE;&#xFF08;&#x53C2;&#x89C1;&#x56FE;P-1&#xFF09;&#xFF0C;&#x4E86;&#x89E3;&#x9879;&#x76EE;&#x8FD9;&#x4E9B;&#x9879;&#x76EE;&#x7684;&#x5168;&#x5C40;&#x89C6;&#x56FE;&#x3002;</p>
+<p>&#x4E91;&#x539F;&#x751F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x662F;&#x4ECE;Heroku&#x7684;12&#x56E0;&#x7D20;&#x7684;&#x5B9A;&#x4E49;&#x5F00;&#x59CB;&#x7684;&#x3002;&#x6211;&#x4EEC;&#x4F1A;&#x89E3;&#x91CA;&#x5B83;&#x4EEC;&#x4E4B;&#x95F4;&#x7684;&#x76F8;&#x4F3C;&#x4E4B;&#x5904;&#xFF0C;&#x4F46;&#x4F60;&#x5E94;&#x8BE5;&#x719F;&#x6089;&#x4E0B;12&#x56E0;&#x7D20;&#x662F;&#x4EC0;&#x4E48;&#xFF08;&#x53C2;&#x89C1;<a href="http://12factor.net" target="_blank">http://12factor.net</a>&#xFF09;&#x3002;</p>
+<p>&#x8FD8;&#x6709;&#x8BB8;&#x591A;&#x5173;&#x4E8E;DevOps&#x7684;&#x4E66;&#x7C4D;&#x3001;&#x6587;&#x7AE0;&#x548C;&#x6F14;&#x8BB2;&#x3002;&#x5C3D;&#x7BA1;&#x672C;&#x4E66;&#x4E0D;&#x5173;&#x6CE8;DevOps&#x5B9E;&#x8DF5;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x5B9E;&#x73B0;&#x4E91;&#x539F;&#x751F;&#x57FA;&#x7840;&#x8BBE;&#x65BD;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;DevOps&#x89C4;&#x5B9A;&#x7684;&#x5DE5;&#x5177;&#x3001;&#x5B9E;&#x8DF5;&#x548C;&#x6587;&#x5316;&#xFF0C;&#x5C06;&#x5F88;&#x96BE;&#x5B9E;&#x73B0;&#x3002;</p>
+<p><img src="https://landscape.cncf.io/images/landscape.png" alt="Cloud Native Landscape"></p>
+<p>&#x56FE;P-1. CNCF&#x666F;&#x89C2;</p>
+<h2 id="&#x81F4;&#x8C22;">&#x81F4;&#x8C22;</h2>
+<p><strong>Justin Garrison</strong></p>
+<p>&#x611F;&#x8C22;Beth&#x3001;Logan&#x3001;&#x6211;&#x7684;&#x670B;&#x53CB;&#x3001;&#x5BB6;&#x4EBA;&#x4EE5;&#x53CA;&#x5728;&#x6B64;&#x8FC7;&#x7A0B;&#x4E2D;&#x652F;&#x6301;&#x6211;&#x4EEC;&#x7684;&#x540C;&#x4E8B;&#x3002;&#x611F;&#x8C22;&#x90A3;&#x4E9B;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x7684;&#x793E;&#x533A;&#x548C;&#x793E;&#x533A;&#x9886;&#x8896;&#x4EE5;&#x53CA;&#x7ED9;&#x4E88;&#x5B9D;&#x8D35;&#x53CD;&#x9988;&#x7684;&#x8BC4;&#x8BBA;&#x8005;&#x3002;&#x611F;&#x8C22;Kris&#x8BA9;&#x8FD9;&#x672C;&#x4E66;&#x53D8;&#x5F97;&#x66F4;&#x597D;&#xFF0C;&#x611F;&#x8C22;&#x8BFB;&#x8005;&#x82B1;&#x70B9;&#x65F6;&#x95F4;&#x9605;&#x8BFB;&#x672C;&#x4E66;&#x5E76;&#x63D0;&#x9AD8;&#x4F60;&#x7684;&#x6280;&#x80FD;&#x3002;</p>
+<p><strong>Kris Nova</strong></p>
+<p>&#x611F;&#x8C22;Allison&#x3001;Bryan&#x3001;Charlie&#x3001;Justin&#x3001;Kjersti&#x3001;Meghann&#x548C;Patrick&#x4E3A;&#x6211;&#x5199;&#x8FD9;&#x672C;&#x4E66;&#x6240;&#x4F5C;&#x51FA;&#x7684;&#x5E2E;&#x52A9;&#x3002;&#x6211;&#x7231;&#x4F60;&#x4EEC;&#xFF0C;&#x6C38;&#x8FDC;&#x611F;&#x6FC0;&#x4F60;&#x4EEC;&#x4E3A;&#x6211;&#x6240;&#x505A;&#x7684;&#x4E00;&#x5207;&#x3002; </p>
+<footer class="page-footer"><span class="copyright"><p><a href="http://gk.link/a/104bw" target="_blank">&#x6781;&#x5BA2;&#x65F6;&#x95F4;&#xB7;&#x4E13;&#x4EAB;&#x798F;&#x5229;&#x901A;&#x9053;&#xFF1A;199&#x5143;&#x793C;&#x5305;&#x9650;&#x65F6;&#x653E;&#x9001;</a> | <a href="https://ws1.sinaimg.cn/large/006tNbRwly1fw3l1sxoijj304g0563z7.jpg" data-lightbox="2fd927ee-fa64-4eca-8ed5-6bd72b573a3c" target="_blank">&#x70B9;&#x51FB;&#x5173;&#x6CE8;&#x3010;ServiceMesher&#x3011; &#x5FAE;&#x4FE1;&#x516C;&#x4F17;&#x53F7;&#x56DE;&#x590D;&#x3010;&#x52A0;&#x7FA4;&#x3011;&#x52A0;&#x5165;&#x5B66;&#x4E60;&#x7FA4;</a></p>Copyright &#xA9; <a href="https://jimmysong.io" target="_blank">jimmysong.io</a> 2018-2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification"> Updated at 
+2019-10-28 22:15:44
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="foreword.html" class="navigation navigation-prev " aria-label="Previous page: 前言">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="what-is-cloud-native-infrastructure.html" class="navigation navigation-next " aria-label="Next page: 第1章 什么是云原生基础架构？">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"介绍","level":"1.3","depth":1,"next":{"title":"第1章 什么是云原生基础架构？","level":"1.4","depth":1,"path":"what-is-cloud-native-infrastructure.md","ref":"what-is-cloud-native-infrastructure.md","articles":[]},"previous":{"title":"前言","level":"1.2","depth":1,"path":"foreword.md","ref":"foreword.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","codesnippet","splitter","page-toc-button","editlink","back-to-top-button","-lunr","-search","search-plus","github-buttons@2.1.0","favicon@^0.0.2","tbfed-pagefooter@^0.0.1","3-ba","theme-default","-highlight","prism","prism-themes","sitemap-general","ga"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"<p><a href=http://gk.link/a/104bw>极客时间·专享福利通道：199元礼包限时放送</a> | <a href=https://ws1.sinaimg.cn/large/006tNbRwly1fw3l1sxoijj304g0563z7.jpg data-lightbox=2fd927ee-fa64-4eca-8ed5-6bd72b573a3c>点击关注【ServiceMesher】 微信公众号回复【加群】加入学习群</a></p>Copyright © <a href=https://jimmysong.io>jimmysong.io</a> 2018-2019","modify_label":" Updated at ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-ghcolors.css"]},"github":{"url":"https://github.com/rootsongjc/cloud-native-infra"},"editlink":{"label":"编辑此页","multilingual":false,"base":"https://github.com/rootsongjc/cloud-native-infra/blob/master"},"splitter":{},"codesnippet":{},"sitemap-general":{"prefix":"https://jimmysong.io/cloud-native-infra"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"github-buttons":{"repo":"rootsongjc/cloud-native-infra","types":["star"],"size":"small"},"3-ba":{"configuration":"auto","token":"11f7d254cfa4e0ca44b175c66d379ecc"},"ga":{"configuration":"auto","token":"UA-93485976-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"search-plus":{},"image-captions":{"caption":"图片 - _CAPTION_"}},"theme":"default","author":"宋净超（Jimmy Song）","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"云原生基础设施","language":"zh-hans","links":{"sidebar":{"Jimmy Song":"https://jimmysong.io","ServiceMesher 社区":"https://www.servicemesher.com","Kubernetes Handbook - Kubernetes中文指南/云原生应用架构实践手册 by Jimmy Song(宋净超)":"https://jimmysong.io/kubernetes-handbook/"}},"gitbook":"*","description":"《云原生基础设施》|Cloud Native Infrastructure 中文版"},"file":{"path":"introduction.md","mtime":"2019-10-28T14:15:44.879Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-28T14:16:43.140Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
