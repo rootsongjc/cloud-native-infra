@@ -84,7 +84,7 @@ IaaS从根本上改变了基础架构与业务的关系。不是随着时间的�
 
 您需要运行的基础架构组件越少越好；但是在公有PaaS提供商中运行所有应用程序可能不是一种选择。
 
-![f-1-1](/Users/jimmysong/Workspace/github/CloudNativeInfra/cni/images/f-1-1.jpg)
+![f-1-1](images/f-1-1.jpg)
 
 图1-1. 基础架构层
 

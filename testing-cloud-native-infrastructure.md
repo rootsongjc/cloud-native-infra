@@ -293,13 +293,13 @@ func TestVm(t *testing.T) {
 
 我们再来看一下例6-3中的`AssertRouteable()`函数。想象一下，我们有一个服务，将连接到虚拟机，并尝试保持连接打开。服务每秒都会调用`AssertRouteable()`函数并记录结果。来自此服务的数据是虚拟机在其网络上路由的能力的准确表示。只要虚拟机可以路由，数据就会在图形上产生一条直线，如图6-1所示。
 
-![f-6-1](/Users/jimmysong/Workspace/github/rootsongjc/cloud-native-infra/images/f-6-1.jpg)
+![f-6-1](images/f-6-1.jpg)
 
 图6-1. 随着时间推移的AssertRoutable测试图
 
 如果在任何时候连接断开或者虚拟机不再能够路由，那么图形数据会发生变化，并且我们会看到图形上的线条发生变化。随着基础架构自行修复，线路开启该图将再次稳定下来，如图6-2所示。
 
-![f-6-2](/Users/jimmysong/Workspace/github/rootsongjc/cloud-native-infra/images/f-6-2.jpg)
+![f-6-2](images/f-6-2.jpg)
 
 图6-2. 失败并且随着时间的推移修复AssertRoutable测试
 
@@ -352,7 +352,7 @@ func TestVm(t *testing.T) {
 
 我们决定引入混乱。因此，我们创建了原始基础架构管理应用程序的副本，但这次我们采取了更加险恶的方式部署基础架构。我们利用我们的部署工具的能力来审计基础架构，并对已经存在的基础架构进行更改。
 
-![f-6-3](/Users/jimmysong/Workspace/github/rootsongjc/cloud-native-infra/images/f-6-3.jpg)
+![f-6-3](images/f-6-3.jpg)
 
 图6-3. 成功的测试
 
@@ -379,7 +379,7 @@ func TestVm(t *testing.T) {
 
 由于第二个基础架构管理应用程序默默地对基础架构进行了更改，因此我们可以预料会看到事态发展。我们图中的数据将开始波动，如图6-4所示。
 
-![f-6-4](/Users/jimmysong/Workspace/github/rootsongjc/cloud-native-infra/images/f-6-4.jpg)
+![f-6-4](images/f-6-4.jpg)
 
 图6-4. 包含网络故障的图形
 
