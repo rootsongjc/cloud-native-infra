@@ -31,18 +31,14 @@
 
 本仓库基于 <https://github.com/CloudNativeInfra/cni> 编写，感谢原仓库贡献者的内容组织和翻译。
 
+## 社区
+
+[点击加入云原生社区](https://jimmysong.io/contact)
+
 ## License
 
 本书英文版版权属于 O’Reilly，中文版版权归属于机械工业出版，基于[署名-非商业性使用-相同方式共享 4.0（CC BY-NC-SA 4.0）](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)分享，本书为本人自行翻译，目的在于学习和巩固云原生知识，如有需要请[购买纸质书](https://item.jd.com/12432007.html)。
 
 <p align="left">
   <img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g7m9ofbzirj302g00vq2p.jpg" alt="CC4 License"/>
-</p>
-
-## 社区&读者交流
-
-**[加入 ServiceMesher 社区](https://www.servicemesher.com/contact/)**：ServiceMesher 社区是由一群拥有相同价值观和理念的志愿者们共同发起，于 2018 年 4 月正式成立。社区关注领域有：容器、微服务、Service Mesh、Serverless，拥抱开源和云原生。
-
-<p align="center">
-  <img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g7m9orx6cuj309k09kdfn.jpg" alt="ServiceMesher微信公众号二维码"/>
 </p>
