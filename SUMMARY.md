@@ -10,3 +10,5 @@
 - [第5章 开发基础架构应用程序](developing-infrastructure-applications.md)
 - [第6章 测试云原生基础架构](testing-cloud-native-infrastructure.md)
 - [第7章 管理云原生应用程序](managing-cloud-native-applications.md)
+- [第8章 保护应用程序](securing-applications.md)
+- [第9章 实施云原生基础架构](implementing-cloud-native-infrasctructure.md)
