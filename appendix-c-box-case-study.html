@@ -1,0 +1,516 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>附录C Box：案例研究 · 云原生基础架构</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="宋净超（Jimmy Song）">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-ghcolors.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-lightbox/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="appendix-b-lock-in.html" />
+    
+
+    
+        <link rel="shortcut icon" href='favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='favicon.ico' type="image/x-icon">
+    
+    
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"rootsongjc/cloud-native-infra","types":["star"],"size":"small"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://jimmysong.io" target="_blank" class="custom-link">回到主页</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="foreword.html">
+            
+                <a href="foreword.html">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="introduction.html">
+            
+                <a href="introduction.html">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="what-is-cloud-native-infrastructure.html">
+            
+                <a href="what-is-cloud-native-infrastructure.html">
+            
+                    
+                    第1章 什么是云原生基础架构？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="when-to-adopt-cloud-native.html">
+            
+                <a href="when-to-adopt-cloud-native.html">
+            
+                    
+                    第2章 采纳云原生基础架构的时机
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="evolution-of-cloud-native-developments.html">
+            
+                <a href="evolution-of-cloud-native-developments.html">
+            
+                    
+                    第3章 云原生部署的演变
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="designing-infrastructure-applicaitons.html">
+            
+                <a href="designing-infrastructure-applicaitons.html">
+            
+                    
+                    第4章 设计基础架构应用程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="developing-infrastructure-applications.html">
+            
+                <a href="developing-infrastructure-applications.html">
+            
+                    
+                    第5章 开发基础架构应用程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="testing-cloud-native-infrastructure.html">
+            
+                <a href="testing-cloud-native-infrastructure.html">
+            
+                    
+                    第6章 测试云原生基础架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="managing-cloud-native-applications.html">
+            
+                <a href="managing-cloud-native-applications.html">
+            
+                    
+                    第7章 管理云原生应用程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="securing-applications.html">
+            
+                <a href="securing-applications.html">
+            
+                    
+                    第8章 保护应用程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="implementing-cloud-native-infrasctructure.html">
+            
+                <a href="implementing-cloud-native-infrasctructure.html">
+            
+                    
+                    第9章 实施云原生基础架构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="appendix-a-patterns-for-network-resiilency.html">
+            
+                <a href="appendix-a-patterns-for-network-resiilency.html">
+            
+                    
+                    附录A 网络弹性模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="appendix-b-lock-in.html">
+            
+                <a href="appendix-b-lock-in.html">
+            
+                    
+                    附录B 锁定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15" data-path="appendix-c-box-case-study.html">
+            
+                <a href="appendix-c-box-case-study.html">
+            
+                    
+                    附录C Box：案例研究
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >附录C Box：案例研究</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><h1 id="&#x9644;&#x5F55;c-box&#xFF1A;&#x6848;&#x4F8B;&#x7814;&#x7A76;">&#x9644;&#x5F55;C Box&#xFF1A;&#x6848;&#x4F8B;&#x7814;&#x7A76;</h1>
+<blockquote>
+<p>&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#x6700;&#x521D;&#x7531;CNCF&#x53D1;&#x5E03;&#x5728;Kubernetes.io&#x4E0A;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x6B64;&#x83B7;&#x5F97;&#x8BB8;&#x53EF;&#x3002;</p>
+</blockquote>
+<p>&#x5728;2014&#x5E74;&#x590F;&#x5929;&#xFF0C;Box&#x5BF9;&#x6C89;&#x6DC0;&#x4E86;&#x5341;&#x5E74;&#x7684;&#x786C;&#x4EF6;&#x548C;&#x8F6F;&#x4EF6;&#x57FA;&#x7840;&#x67B6;&#x6784;&#x7684;&#x75DB;&#x82E6;&#xFF0C;&#x8FD9;&#x65E0;&#x6CD5;&#x4E0E;&#x516C;&#x53F8;&#x7684;&#x9700;&#x6C42;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x3002;</p>
+<p>&#x8BE5;&#x5E73;&#x53F0;&#x4E3A;&#x8D85;&#x8FC7;5000&#x4E07;&#x7528;&#x6237;&#xFF08;&#x5305;&#x62EC;&#x653F;&#x5E9C;&#x548C;&#x5927;&#x578B;&#x4F01;&#x4E1A;&#x5982;&#x901A;&#x7528;&#x7535;&#x6C14;&#x516C;&#x53F8;&#xFF09;&#x7BA1;&#x7406;&#x548C;&#x5171;&#x4EAB;&#x4E91;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF0C;Box&#x6700;&#x521D;&#x662F;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;PHP&#x5199;&#x7684;&#x5177;&#x6709;&#x6570;&#x767E;&#x4E07;&#x884C;&#x7684;&#x5E9E;&#x5927;&#x4EE3;&#x7801;&#xFF0C;&#x5185;&#x7F6E;&#x88F8;&#x673A;&#x6570;&#x636E;&#x4E2D;&#x5FC3;&#x3002;&#x5B83;&#x5DF2;&#x7ECF;&#x5F00;&#x59CB;&#x5C06;&#x5355;&#x4F53;&#x5E94;&#x7528;&#x5206;&#x89E3;&#x6210;&#x5FAE;&#x670D;&#x52A1;&#x3002; &#x201C;&#x968F;&#x7740;&#x6211;&#x4EEC;&#x6269;&#x5C55;&#x5230;&#x5168;&#x7403;&#x5404;&#x5730;&#xFF0C;&#x516C;&#x6709;&#x4E91;&#x6218;&#x4E89;&#x6B63;&#x5728;&#x5347;&#x6E29;&#xFF0C;&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x4E13;&#x6CE8;&#x4E8E;&#x5982;&#x4F55;&#x5728;&#x8BB8;&#x591A;&#x4E0D;&#x540C;&#x7684;&#x73AF;&#x5883;&#x548C;&#x8BB8;&#x591A;&#x4E0D;&#x540C;&#x7684;&#x4E91;&#x57FA;&#x7840;&#x67B6;&#x6784;&#x63D0;&#x4F9B;&#x5546;&#x4E4B;&#x95F4;&#x8FD0;&#x884C;&#x6211;&#x4EEC;&#x7684;&#x5DE5;&#x4F5C;&#x8D1F;&#x8F7D;&#x201D;&#xFF0C;Box&#x8054;&#x5408;&#x521B;&#x59CB;&#x4EBA;&#x548C;&#x670D;&#x52A1;&#x67B6;&#x6784;&#x5E08;Sam Ghods&#x8BF4;&#x3002; &#x201C;&#x8FC4;&#x4ECA;&#x4E3A;&#x6B62;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5DE8;&#x5927;&#x7684;&#x6311;&#x6218;&#xFF0C;&#x56E0;&#x4E3A;&#x6240;&#x6709;&#x8FD9;&#x4E9B;&#x4E0D;&#x540C;&#x7684;&#x63D0;&#x4F9B;&#x5546;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x88F8;&#x673A;&#xFF0C;&#x90FD;&#x6709;&#x975E;&#x5E38;&#x4E0D;&#x540C;&#x7684;&#x63A5;&#x53E3;&#x548C;&#x4E0E;&#x5408;&#x4F5C;&#x65B9;&#x5F0F;&#x3002;&#x201D;</p>
+<p>&#x5F53;Ghods&#x53C2;&#x52A0;DockerCon&#x65F6;&#xFF0C;Box&#x7684;&#x4E91;&#x539F;&#x751F;&#x4E4B;&#x65C5;&#x52A0;&#x901F;&#x4E86;&#x3002;&#x8BE5;&#x516C;&#x53F8;&#x5DF2;&#x7ECF;&#x8BA4;&#x8BC6;&#x5230;&#xFF0C;&#x5B83;&#x4E0D;&#x80FD;&#x518D;&#x4EC5;&#x4EC5;&#x4F7F;&#x7528;&#x88F8;&#x673A;&#x6765;&#x8FD0;&#x884C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x6B63;&#x5728;&#x7814;&#x7A76;Docker&#x5BB9;&#x5668;&#x5316;&#xFF0C;&#x4F7F;&#x7528;OpenStack&#x8FDB;&#x884C;&#x865A;&#x62DF;&#x5316;&#x4EE5;&#x53CA;&#x652F;&#x6301;&#x516C;&#x6709;&#x4E91;&#x3002;</p>
+<p>&#x5728;&#x90A3;&#x6B21;&#x4F1A;&#x8BAE;&#x4E0A;&#xFF0C;Google&#x5BA3;&#x5E03;&#x53D1;&#x5E03;Kubernetes&#x5BB9;&#x5668;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#xFF0C;Ghods&#x6210;&#x529F;&#x4E86;&#x3002; &#x201C;&#x6211;&#x4EEC;&#x7814;&#x7A76;&#x4E86;&#x8BB8;&#x591A;&#x4E0D;&#x540C;&#x7684;&#x9009;&#x62E9;&#xFF0C;&#x4F46;Kubernetes&#x786E;&#x5B9E;&#x5F88;&#x51FA;&#x8272;&#xFF0C;&#x7279;&#x522B;&#x662F;&#x56E0;&#x4E3A;Borg&#x8001;&#x5175;&#x7684;&#x56E2;&#x961F;&#x975E;&#x5E38;&#x5F3A;&#x5927;&#xFF0C;&#x53EF;&#x4EE5;&#x4EE5;&#x57FA;&#x7840;&#x67B6;&#x6784;&#x4E0D;&#x53EF;&#x77E5;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x8FD0;&#x884C;&#x4E91;&#x8F6F;&#x4EF6;&#xFF0C;&#x201D;&#x4ED6;&#x8C08;&#x5230; Google&#x5185;&#x90E8;&#x7684;&#x5BB9;&#x5668;&#x8C03;&#x5EA6;&#x5668;Borg&#x3002; &#x201C;&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x4E00;&#x5F00;&#x59CB;&#x5B83;&#x8BBE;&#x8BA1;&#x4E0E;&#x88F8;&#x673A;&#x4E00;&#x6837;&#x8FD0;&#x884C;&#xFF0C;&#x5C31;&#x50CF;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x6570;&#x636E;&#x4E2D;&#x5FC3;&#x5185;&#x8FC1;&#x79FB;&#x5230;&#x5B83;&#x4E00;&#x6837;&#xFF0C;&#x7136;&#x540E;&#x4E5F;&#x4F7F;&#x7528;&#x76F8;&#x540C;&#x7684;&#x5DE5;&#x5177;&#x548C;&#x6982;&#x5FF5;&#x5728;&#x516C;&#x6709;&#x4E91;&#x63D0;&#x4F9B;&#x5546;&#x4E0A;&#x8FD0;&#x884C;&#x3002;&#x201D;</p>
+<p>&#x53E6;&#x5916;&#xFF1A;Ghods&#x559C;&#x6B22;Kubernetes&#x62E5;&#x6709;&#x4E00;&#x5957;&#x901A;&#x7528;&#x7684;API&#x5BF9;&#x8C61;&#xFF0C;&#x5982;pod&#x3001;&#x670D;&#x52A1;&#x3001;&#x526F;&#x672C;&#x96C6;&#x548C;&#x90E8;&#x7F72;&#xFF0C;&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x4E00;&#x81F4;&#x7684;&#x63A5;&#x53E3;&#x6765;&#x6784;&#x5EFA;&#x5DE5;&#x5177;&#x3002; &#x201C;&#x751A;&#x81F3;&#x50CF;OpenShift&#x6216;Deis&#x8FD9;&#x6837;&#x7684;&#x6784;&#x5EFA;&#x5728;Kubernetes&#x4E4B;&#x4E0A;&#x7684;PaaS&#x5C42;&#x4ECD;&#x7136;&#x5C06;&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#x89C6;&#x4E3A;&#x7EDF;&#x4E00;&#x7684;&#x539F;&#x5219;&#xFF0C;&#x201D;&#x4ED6;&#x8BF4;&#x3002; &#x201C;&#x6211;&#x4EEC;&#x5F88;&#x9AD8;&#x5174;&#x80FD;&#x591F;&#x5728;&#x6574;&#x4E2A;&#x751F;&#x6001;&#x7CFB;&#x7EDF;&#x4E2D;&#x5171;&#x4EAB;&#x8FD9;&#x4E9B;&#x62BD;&#x8C61;&#x6982;&#x5FF5;&#xFF0C;&#x8FD9;&#x4F1A;&#x4EA7;&#x751F;&#x6BD4;&#x6211;&#x4EEC;&#x5728;&#x5176;&#x4ED6;&#x6F5C;&#x5728;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x4E2D;&#x66F4;&#x591A;&#x7684;&#x52A8;&#x529B;&#x3002;&#x201D;</p>
+<p>&#x516D;&#x4E2A;&#x6708;&#x540E;Box&#x5728;&#x4E00;&#x4E2A;&#x751F;&#x4EA7;&#x6570;&#x636E;&#x4E2D;&#x5FC3;&#x7684;&#x96C6;&#x7FA4;&#x4E2D;&#x90E8;&#x7F72;&#x4E86;Kubernetes&#x3002;Kubernetes&#x5728;0.11&#x7248;&#x672C;&#x4E4B;&#x524D;&#x4ECD;&#x7136;&#x662F;&#x6D4B;&#x8BD5;&#x7248;&#x3002;&#x4ED6;&#x4EEC;&#x4ECE;&#x5C0F;&#x7248;&#x672C;&#x5F00;&#x59CB;&#xFF1A;Ghods&#x7684;&#x56E2;&#x961F;&#x5728;Kubernetes&#x4E0A;&#x8FD0;&#x884C;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5C31;&#x662F;Box API&#x76D1;&#x89C6;&#x5668;&#xFF0C;&#x786E;&#x8BA4;&#x4E86;Box&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x3002; &#x201C;&#x8FD9;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x8BA9;&#x6574;&#x4E2A;&#x7BA1;&#x9053;&#x8FD0;&#x4F5C;&#x6B63;&#x5E38;&#x7684;&#x6D4B;&#x8BD5;&#x670D;&#x52A1;&#xFF0C;&#x201D;&#x4ED6;&#x8BF4;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x662F;&#x4E00;&#x4E9B;&#x5904;&#x7406;&#x4F5C;&#x4E1A;&#x7684;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#xFF0C;&#x5B83;&#x4EEC;&#x201C;&#x5F88;&#x597D;&#x800C;&#x4E14;&#x5B89;&#x5168;&#xFF0C;&#x56E0;&#x4E3A;&#x5982;&#x679C;&#x4ED6;&#x4EEC;&#x9047;&#x5230;&#x4EFB;&#x4F55;&#x4E2D;&#x65AD;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x8BA9;&#x6765;&#x81EA;&#x5BA2;&#x6237;&#x7684;&#x540C;&#x6B65;&#x4F20;&#x5165;&#x8BF7;&#x6C42;&#x5931;&#x8D25;&#x3002;&#x201D;</p>
+<p>&#x51E0;&#x4E2A;&#x6708;&#x540E;&#xFF0C;&#x8BE5;&#x56E2;&#x961F;&#x53EF;&#x4EE5;&#x53D1;&#x9001;&#x5E76;&#x8981;&#x6C42;&#x63D0;&#x4F9B;&#x4FE1;&#x606F;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B9E;&#x65F6;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x3002;&#x90A3;&#x65F6;&#xFF0C;Ghods&#x8BF4;&#xFF1A;&#x201C;&#x6211;&#x4EEC;&#x5BF9;Kubernetes&#x96C6;&#x7FA4;&#x7684;&#x7A33;&#x5B9A;&#x6027;&#x611F;&#x5230;&#x6EE1;&#x610F;&#x3002;&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x8FC1;&#x79FB;&#x4E00;&#x4E9B;&#x670D;&#x52A1;&#xFF0C;&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5C06;&#x6269;&#x5927;&#x96C6;&#x7FA4;&#x7684;&#x89C4;&#x6A21;&#x548C;&#x7AEF;&#x53E3;&#x6570;&#x91CF;&#xFF0C;&#x6700;&#x540E;&#x6BCF;&#x4E2A;&#x6570;&#x636E;&#x4E2D;&#x5FC3;&#x7684;&#x670D;&#x52A1;&#x5668;&#x6570;&#x91CF;&#x5927;&#x7EA6;&#x4E3A;100&#x53F0;&#xFF0C;&#x8FD9;&#x4E9B;&#x670D;&#x52A1;&#x5668;&#x7EAF;&#x7CB9;&#x4E13;&#x7528;&#x4E8E;Kubernetes&#x3002;&#x5728;&#x672A;&#x6765;&#x7684;12&#x4E2A;&#x6708;&#x91CC;&#xFF0C;&#x8FD9;&#x4E2A;&#x6570;&#x5B57;&#x5C06;&#x4F1A;&#x589E;&#x957F;&#x5F88;&#x591A;&#xFF0C;&#x8FBE;&#x5230;&#x6570;&#x767E;&#x751A;&#x81F3;&#x6570;&#x5343;&#x3002;&#x201C;</p>
+<p>&#x5728;&#x89C2;&#x5BDF;&#x5F00;&#x59CB;&#x4F7F;&#x7528;Kubernetes&#x8FDB;&#x884C;&#x5FAE;&#x670D;&#x52A1;&#x7684;&#x56E2;&#x961F;&#x65F6;&#xFF0C;&#x201C;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x6B63;&#x5728;&#x53D1;&#x5E03;&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x6570;&#x91CF;&#x6709;&#x6240;&#x589E;&#x52A0;&#xFF0C;&#x201D;Ghodsnotes&#x8BF4;&#x3002; &#x201C;&#x663E;&#x7136;&#xFF0C;&#x901A;&#x8FC7;&#x5FAE;&#x670D;&#x52A1;&#x6784;&#x5EFA;&#x8F6F;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x5DF2;&#x88AB;&#x538B;&#x6291;&#x5F88;&#x4E45;&#xFF0C;&#x968F;&#x7740;&#x7075;&#x6D3B;&#x6027;&#x7684;&#x63D0;&#x9AD8;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x7684;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x63D0;&#x9AD8;&#x4E86;&#x751F;&#x4EA7;&#x529B;&#xFF0C;&#x5E76;&#x4E3A;&#x66F4;&#x597D;&#x7684;&#x67B6;&#x6784;&#x9009;&#x62E9;&#x505A;&#x597D;&#x4E86;&#x51C6;&#x5907;&#x3002;&#x201D;</p>
+<p>Ghods&#x53CD;&#x6620;&#xFF0C;&#x4F5C;&#x4E3A;&#x65E9;&#x671F;&#x91C7;&#x7528;&#x8005;&#xFF0C;Box&#x7ECF;&#x5386;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x65C5;&#x7A0B;&#x3002;&#x4ED6;&#x8BF4;&#xFF1A;&#x201C;&#x6211;&#x4EEC;&#x80AF;&#x5B9A;&#x662F;&#x5728;&#x7B49;&#x5F85;&#x67D0;&#x4E9B;&#x4E8B;&#x60C5;&#x7A33;&#x5B9A;&#x548C;&#x529F;&#x80FD;&#x53D1;&#x5E03;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x4E00;&#x6B65;&#x4E0A;&#x88AB;&#x9501;&#x5B9A;&#xFF0C;&#x200B;&#x200B;&#x201D;&#x4ED6;&#x8BF4;&#x3002; &#x201C;&#x5728;&#x65E9;&#x671F;&#xFF0C;&#x6211;&#x4EEC;&#x5BF9;Kubectl&#x5E94;&#x7528;&#x7B49;&#x7EC4;&#x4EF6;&#x505A;&#x4E86;&#x5F88;&#x591A;&#x8D21;&#x732E;&#xFF0C;&#x5E76;&#x7B49;&#x5F85;Kubernetes&#x53D1;&#x5E03;&#xFF0C;&#x7136;&#x540E;&#x6211;&#x4EEC;&#x4F1A;&#x5347;&#x7EA7;&#xFF0C;&#x8D21;&#x732E;&#x66F4;&#x591A;&#xFF0C;&#x5E76;&#x6765;&#x56DE;&#x591A;&#x6B21;&#x3002;&#x6574;&#x4E2A;&#x9879;&#x76EE;&#x4ECE;&#x6211;&#x4EEC;&#x7B2C;&#x4E00;&#x6B21;&#x5728;Kubernetes&#x4E0A;&#x8FDB;&#x884C;&#x5B9E;&#x9645;&#x90E8;&#x7F72;&#x5230;GA&#x9700;&#x8981;&#x5927;&#x7EA6;18&#x4E2A;&#x6708;&#x7684;&#x65F6;&#x95F4;&#x3002;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4ECA;&#x5929;&#x81EA;&#x5DF1;&#x6765;&#x505A;&#x4E00;&#x904D;&#x540C;&#x6837;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5C11;&#x4E8E;&#x516D;&#x4E2A;&#x6708;&#x3002;&#x201C;</p>
+<p>&#x65E0;&#x8BBA;&#x5982;&#x4F55;&#xFF0C;Box&#x65E0;&#x9700;&#x4E3A;Kubernetes&#x505A;&#x8FC7;&#x591A;&#x4FEE;&#x6539;&#x3002;Ghods&#x8BF4;&#xFF1A;&#x201C;&#x6211;&#x4EEC;&#x56E2;&#x961F;&#x5728;Box&#x4E2D;&#x5B9E;&#x65BD;Kubernetes&#x6240;&#x505A;&#x7684;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x5DE5;&#x4F5C;&#x4E00;&#x76F4;&#x81F4;&#x529B;&#x4E8E;&#x5728;&#x6211;&#x4EEC;&#x73B0;&#x6709;&#x7684;&#xFF08;&#x5F80;&#x5F80;&#x662F;&#x9057;&#x7559;&#x4E0B;&#x6765;&#x7684;&#xFF09;&#x57FA;&#x7840;&#x67B6;&#x6784;&#x5185;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x4F8B;&#x5982;&#x5C06;&#x6211;&#x4EEC;&#x7684;&#x57FA;&#x7840;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4ECE;RHEL6&#x5347;&#x7EA7;&#x5230;RHEL7&#x6216;&#x5C06;&#x5176;&#x6574;&#x5408;&#x7EB3;&#x5165;&#x5230;&#x6211;&#x4EEC;&#x7684;&#x76D1;&#x63A7;&#x57FA;&#x7840;&#x67B6;&#x6784;Nagios&#x3002;&#x4F46;&#x603B;&#x4F53;&#x800C;&#x8A00;&#xFF0C;Kubernetes&#x975E;&#x5E38;&#x7075;&#x6D3B;&#xFF0C;&#x80FD;&#x591F;&#x9002;&#x5E94;&#x6211;&#x4EEC;&#x7684;&#x8BB8;&#x591A;&#x9650;&#x5236;&#x56E0;&#x7D20;&#xFF0C;&#x5E76;&#x4E14;&#x5B83;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x88F8;&#x673A;&#x57FA;&#x7840;&#x67B6;&#x6784;&#x4E0A;&#x8FD0;&#x884C;&#x975E;&#x5E38;&#x6210;&#x529F;&#x3002;&#x201C;</p>
+<p>&#x5BF9;&#x4E8E;Box&#x6765;&#x8BF4;&#xFF0C;&#x66F4;&#x5927;&#x7684;&#x6311;&#x6218;&#x4E5F;&#x8BB8;&#x662F;&#x6587;&#x5316;&#x4E0A;&#x7684;&#x6311;&#x6218;&#x3002;Ghods&#x8BF4;&#xFF1A;&#x201C;Kubernetes&#x548C;&#x4E00;&#x822C;&#x7684;&#x4E91;&#x672C;&#x8EAB;&#x4EE3;&#x8868;&#x4E86;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x5927;&#x7684;&#x8303;&#x5F0F;&#x8F6C;&#x6362;&#xFF0C;&#x5E76;&#x4E14;&#x5B83;&#x4E0D;&#x662F;&#x975E;&#x5E38;&#x6E10;&#x8FDB;&#x7684;&#xFF0C;&#x201D;Ghods&#x8BF4;&#x3002; &#x201C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x8BF4;&#xFF0C;Kubernetes&#x5C06;&#x4F1A;&#x89E3;&#x51B3;&#x6240;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x80FD;&#x591F;&#x4EE5;&#x6B63;&#x786E;&#x7684;&#x65B9;&#x5F0F;&#x505A;&#x4E8B;&#xFF0C;&#x4E00;&#x5207;&#x90FD;&#x4F1A;&#x53D8;&#x5F97;&#x66F4;&#x597D;&#x3002;&#x4F46;&#x662F;&#x8981;&#x8BB0;&#x4F4F;&#xFF0C;&#x5B83;&#x4E0D;&#x50CF;&#x5176;&#x4ED6;&#x8BB8;&#x591A;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x90A3;&#x6837;&#x53EF;&#x9760;&#x3002;&#x4F60;&#x4E0D;&#x80FD;&#x8BF4;&#x8FD9;&#x5BB6;&#x6216;&#x90A3;&#x5BB6;&#x516C;&#x53F8;&#x82B1;&#x4E86;&#x591A;&#x5C11;&#x65F6;&#x95F4;&#x505A;&#x8FD9;&#x4EF6;&#x4E8B;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD8;&#x6CA1;&#x6709;&#x90A3;&#x4E48;&#x591A;&#x3002;&#x6211;&#x4EEC;&#x7684;&#x56E2;&#x961F;&#x5FC5;&#x987B;&#x771F;&#x6B63;&#x4E3A;&#x8D44;&#x6E90;&#x800C;&#x6218;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x7684;&#x9879;&#x76EE;&#x6709;&#x4E00;&#x70B9;&#x70B9;&#x7684;&#x6050;&#x60E7;&#x3002;&#x201C;</p>
+<p>&#x4ECE;&#x7ECF;&#x9A8C;&#x4E2D;&#x5B66;&#x4E60;&#xFF0C;Ghods&#x4E3A;&#x7ECF;&#x5386;&#x7C7B;&#x4F3C;&#x6311;&#x6218;&#x7684;&#x516C;&#x53F8;&#x63D0;&#x4F9B;&#x4E86;&#x4EE5;&#x4E0B;&#x4E24;&#x6761;&#x5EFA;&#x8BAE;&#xFF1A;</p>
+<ol>
+<li>&#x63D0;&#x524D;&#x548C;&#x7ECF;&#x5E38;&#x4EA4;&#x4ED8;&#x3002;&#x5BF9;&#x4E8E;Box&#x6765;&#x8BF4;&#xFF0C;&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x662F;&#x4E00;&#x4E2A;&#x5DE8;&#x5927;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x56E2;&#x961F;&#x5FC5;&#x987B;&#x51B3;&#x5B9A;&#x662F;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x4E34;&#x65F6;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x8FD8;&#x662F;&#x7B49;&#x5F85;Kubernetes&#x672C;&#x8EAB;&#x6EE1;&#x8DB3;Box&#x7684;&#x72EC;&#x7279;&#x8981;&#x6C42;&#x3002;&#x7ECF;&#x8FC7;&#x591A;&#x6B21;&#x8FA9;&#x8BBA;&#x4E4B;&#x540E;&#xFF0C;&#x201C;&#x6211;&#x4EEC;&#x521A;&#x5F00;&#x59CB;&#x4E13;&#x6CE8;&#x4E8E;&#x63D0;&#x4F9B;&#x53EF;&#x884C;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x7136;&#x540E;&#x5904;&#x7406;&#x53EF;&#x80FD;&#x5728;&#x7A0D;&#x540E;&#x8FC1;&#x79FB;&#x5230;&#x66F4;&#x539F;&#x59CB;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x201D;Ghods&#x8BF4;&#x3002; &#x201C;&#x65E0;&#x8BBA;&#x591A;&#x4E48;&#x5FAE;&#x4E0D;&#x8DB3;&#x9053;&#xFF0C;&#x56E2;&#x961F;&#x7684;&#x4E0A;&#x8FF0;&#x76EE;&#x6807;&#x5E94;&#x59CB;&#x7EC8;&#x662F;&#x4E3A;&#x57FA;&#x7840;&#x67B6;&#x6784;&#x4E0A;&#x7684;&#x5B9E;&#x9645;&#x751F;&#x4EA7;&#x7528;&#x4F8B;&#x670D;&#x52A1;&#x3002;&#x8FD9;&#x6709;&#x52A9;&#x4E8E;&#x4FDD;&#x6301;&#x56E2;&#x961F;&#x672C;&#x8EAB;&#x548C;&#x7EC4;&#x7EC7;&#x5BF9;&#x9879;&#x76EE;&#x7684;&#x770B;&#x6CD5;&#x3002;&#x201C;</li>
+<li>&#x4FDD;&#x6301;&#x5F00;&#x653E;&#x7684;&#x6001;&#x5EA6;&#xFF0C;&#x4E86;&#x89E3;&#x516C;&#x53F8;&#x5FC5;&#x987B;&#x4ECE;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x90A3;&#x91CC;&#x62BD;&#x8C61;&#x51FA;&#x4EC0;&#x4E48;&#x548C;&#x6CA1;&#x6709;&#x62BD;&#x8C61;&#x51FA;&#x4EC0;&#x4E48;&#x3002;&#x65E9;&#x671F;&#xFF0C;&#x56E2;&#x961F;&#x5728;Dockerfiles&#x4E4B;&#x4E0A;&#x6784;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#xFF0C;&#x4EE5;&#x5E2E;&#x52A9;&#x786E;&#x4FDD;&#x6240;&#x6709;&#x5BB9;&#x5668;&#x955C;&#x50CF;&#x5177;&#x6709;&#x6B63;&#x786E;&#x7684;&#x5B89;&#x5168;&#x66F4;&#x65B0;&#x3002;&#x4E8B;&#x5B9E;&#x8BC1;&#x660E;&#x8FD9;&#x662F;&#x591A;&#x4F59;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x56E0;&#x4E3A;&#x5BB9;&#x5668;&#x955C;&#x50CF;&#x662F;&#x4E0D;&#x53EF;&#x53D8;&#x7684;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x6784;&#x5EFA;&#x540E;&#x626B;&#x63CF;&#x5B83;&#x4EEC;&#x4EE5;&#x786E;&#x4FDD;&#x5B83;&#x4EEC;&#x4E0D;&#x5305;&#x542B;&#x6F0F;&#x6D1E;&#x3002;&#x56E0;&#x4E3A;&#x901A;&#x8FC7;&#x5BB9;&#x5668;&#x5316;&#x6765;&#x7BA1;&#x7406;&#x57FA;&#x7840;&#x67B6;&#x6784;&#x662F;&#x4E00;&#x4E2A;&#x4E0D;&#x8FDE;&#x7EED;&#x7684;&#x98DE;&#x8DC3;&#xFF0C;&#x6240;&#x4EE5;&#x6700;&#x597D;&#x5148;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x672C;&#x5730;&#x5DE5;&#x5177;&#x5B66;&#x4E60;&#x5176;&#x72EC;&#x7279;&#x7684;&#x4F18;&#x52BF;&#x548C;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#x3002;&#x62BD;&#x8C61;&#x53EA;&#x80FD;&#x5728;&#x5B9E;&#x9645;&#x9700;&#x8981;&#x51FA;&#x73B0;&#x4E4B;&#x540E;&#x624D;&#x80FD;&#x5EFA;&#x7ACB;&#x3002;</li>
+</ol>
+<p>&#x6700;&#x540E;&#xFF0C;&#x5F71;&#x54CD;&#x529B;&#x975E;&#x5E38;&#x5F3A;&#x5927;&#x3002;&#x201C;&#x5728;Kubernetes&#x4E4B;&#x524D;&#xFF0C;&#x201D;Ghods&#x8BF4;&#xFF0C;&#x201C;&#x6211;&#x4EEC;&#x7684;&#x57FA;&#x7840;&#x67B6;&#x6784;&#x975E;&#x5E38;&#x9648;&#x65E7;&#xFF0C;&#x9700;&#x8981;6&#x4E2A;&#x591A;&#x6708;&#x624D;&#x80FD;&#x90E8;&#x7F72;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x3002;&#x73B0;&#x5728;&#xFF0C;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x90E8;&#x7F72;&#x65F6;&#x95F4;&#x4E0D;&#x5230;&#x4E94;&#x5929;&#x3002;&#x6211;&#x4EEC;&#x6B63;&#x5728;&#x52AA;&#x529B;&#x8BA9;&#x5B83;&#x8FBE;&#x5230;&#x4E0D;&#x5230;&#x4E00;&#x5929;&#x3002;&#x8BDA;&#x7136;&#xFF0C;&#x8FD9;&#x516D;&#x4E2A;&#x6708;&#x7684;&#x5927;&#x90E8;&#x5206;&#x65F6;&#x95F4;&#x90FD;&#x662F;&#x7531;&#x4E8E;&#x6211;&#x4EEC;&#x7684;&#x7CFB;&#x7EDF;&#x6709;&#x591A;&#x4E48;&#x7CDF;&#x7CD5;&#xFF0C;&#x4F46;&#x88F8;&#x673A;&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x4E00;&#x4E2A;&#x96BE;&#x4EE5;&#x652F;&#x6301;&#x7684;&#x5E73;&#x53F0;&#xFF0C;&#x9664;&#x975E;&#x60A8;&#x6709;&#x50CF;Kubernetes&#x8FD9;&#x6837;&#x7684;&#x7CFB;&#x7EDF;&#x6765;&#x5E2E;&#x52A9;&#x7BA1;&#x7406;&#x5B83;&#x3002;&#x201C;</p>
+<p>&#x6309;Ghods&#x7684;&#x4F30;&#x8BA1;&#xFF0C;Box&#x8DDD;&#x79BB;&#x5B8C;&#x6210;90&#xFF05;&#x8FD0;&#x884C;&#x5728;Kubernetes&#x4E0A;&#x7684;&#x76EE;&#x6807;&#x8FD8;&#x6709;&#x51E0;&#x5E74;&#x7684;&#x65F6;&#x95F4;&#x3002; &#x201C;&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#xFF0C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#x4E86;&#x4E00;&#x9879;&#x7A33;&#x5B9A;&#x7684;&#xFF0C;&#x5173;&#x952E;&#x4EFB;&#x52A1;&#x7684;Kubernetes&#x90E8;&#x7F72;&#xFF0C;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x5F88;&#x591A;&#x4EF7;&#x503C;&#xFF0C;&#x201D;&#x4ED6;&#x8BF4;&#x3002; &#x201C;&#x73B0;&#x5728;&#x6211;&#x4EEC;10&#xFF05;&#x5DE6;&#x53F3;&#x670D;&#x52A1;&#x5668;&#x90FD;&#x8FD0;&#x884C;&#x5728;Kubernetes&#x4E0A;&#xFF0C;&#x6211;&#x8BA4;&#x4E3A;&#x660E;&#x5E74;&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x4F1A;&#x8D85;&#x8FC7;&#x4E00;&#x534A;&#x3002;&#x6211;&#x4EEC;&#x6B63;&#x5728;&#x52AA;&#x529B;&#x5B9E;&#x73B0;&#x6240;&#x6709;&#x65E0;&#x72B6;&#x6001;&#x670D;&#x52A1;&#x4F7F;&#x7528;&#x6848;&#x4F8B;&#xFF0C;&#x5E76;&#x8BA1;&#x5212;&#x5728;&#x6B64;&#x4E4B;&#x540E;&#x5C06;&#x6211;&#x4EEC;&#x7684;&#x91CD;&#x70B9;&#x8F6C;&#x79FB;&#x5230;&#x6709;&#x72B6;&#x6001;&#x670D;&#x52A1;&#x3002;&#x201C;</p>
+<p>&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x4ED6;&#x5728;&#x6574;&#x4E2A;&#x884C;&#x4E1A;&#x4E2D;&#x7684;&#x8BBE;&#x60F3;&#xFF1A;Ghods&#x9884;&#x6D4B;Kubernetes&#x6709;&#x673A;&#x4F1A;&#x6210;&#x4E3A;&#x65B0;&#x7684;&#x4E91;&#x5E73;&#x53F0;&#x3002; Kubernetes&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x6DB5;&#x76D6;&#x4E0D;&#x540C;&#x4E91;&#x5E73;&#x53F0;&#x7684;API&#xFF0C;&#x5305;&#x62EC;&#x88F8;&#x673A;&#xFF0C;&#x4EE5;&#x53CA;&#x201C;&#x5F53;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x9488;&#x5BF9;&#x5355;&#x4E00;&#x754C;&#x9762;&#x8FDB;&#x884C;&#x7F16;&#x7A0B;&#x65F6;&#xFF0C;&#x6211;&#x4E0D;&#x8BA4;&#x4E3A;&#x4EBA;&#x4EEC;&#x5DF2;&#x7ECF;&#x770B;&#x5230;&#x4E86;&#x53EF;&#x80FD;&#x7684;&#x5168;&#x90E8;&#x6F5C;&#x529B;&#x201D;&#xFF0C;&#x4ED6;&#x8BF4;&#x3002; &#x201C;&#x4E0E;AWS&#x6539;&#x53D8;&#x57FA;&#x7840;&#x67B6;&#x6784;&#x4E00;&#x6837;&#xFF0C;&#x60A8;&#x4E0D;&#x5FC5;&#x518D;&#x8003;&#x8651;&#x670D;&#x52A1;&#x5668;&#x6216;&#x673A;&#x67DC;&#x6216;&#x7F51;&#x7EDC;&#x8BBE;&#x5907;&#xFF0C;Kubernetes&#x4F7F;&#x60A8;&#x80FD;&#x591F;&#x4E13;&#x6CE8;&#x4E8E;&#x60A8;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x8F6F;&#x4EF6;&#xFF0C;&#x8FD9;&#x975E;&#x5E38;&#x4EE4;&#x4EBA;&#x5174;&#x594B;&#x3002;&#x8FD9;&#x662F;&#x613F;&#x666F;&#x3002;&#x201C;</p>
+<p>Ghods&#x6307;&#x51FA;&#x4E86;&#x5DF2;&#x7ECF;&#x5728;&#x5F00;&#x53D1;&#x6216;&#x6700;&#x8FD1;&#x53D1;&#x5E03;&#x7684;&#x4F5C;&#x4E3A;&#x4E91;&#x5E73;&#x53F0;&#x7684;&#x9879;&#x76EE;&#xFF1A;&#x96C6;&#x7FA4;&#x8054;&#x90A6;&#xFF0C;Dashboard UI&#x548C;CoreOS&#x7684;etcd operator&#x3002; &#x201C;&#x6211;&#x771F;&#x7684;&#x76F8;&#x4FE1;&#x8FD9;&#x662F;&#x6211;&#x5728;&#x4E91;&#x57FA;&#x7840;&#x67B6;&#x6784;&#x4E2D;&#x770B;&#x5230;&#x7684;&#x6700;&#x6FC0;&#x52A8;&#x4EBA;&#x5FC3;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x201D;&#x4ED6;&#x8BF4;&#xFF0C;&#x201C;&#x56E0;&#x4E3A;&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x524D;&#x6240;&#x672A;&#x6709;&#x7684;&#x81EA;&#x52A8;&#x5316;&#x548C;&#x667A;&#x80FD;&#x73AF;&#x5883;&#xFF0C;&#x5176;&#x57FA;&#x7840;&#x67B6;&#x6784;&#x5BF9;&#x6BCF;&#x4E2A;&#x57FA;&#x7840;&#x67B6;&#x6784;&#x5E73;&#x53F0;&#x90FD;&#x662F;&#x53EF;&#x79FB;&#x690D;&#x548C;&#x4E0D;&#x53EF;&#x77E5;&#x7684;&#x3002;&#x201D;</p>
+<p>&#x7531;&#x4E8E;&#x65E9;&#x671F;&#x51B3;&#x5B9A;&#x4F7F;&#x7528;&#x88F8;&#x673A;&#xFF0C;Box&#x4E0D;&#x5F97;&#x5DF2;&#x5F00;&#x59CB;&#x4E86;Kubernetes&#x4E4B;&#x65C5;&#x3002;&#x4F46;&#x662F;Ghods&#x8868;&#x793A;&#xFF0C;&#x5373;&#x4F7F;&#x516C;&#x53F8;&#x73B0;&#x5728;&#x4E0D;&#x5FC5;&#x5BF9;&#x4E91;&#x63D0;&#x4F9B;&#x5546;&#x4E0D;&#x53EF;&#x77E5;&#xFF0C;Kubernetes&#x4E5F;&#x53EF;&#x80FD;&#x5F88;&#x5FEB;&#x6210;&#x4E3A;&#x884C;&#x4E1A;&#x6807;&#x51C6;&#xFF0C;&#x56E0;&#x4E3A;&#x8D8A;&#x6765;&#x8D8A;&#x591A;&#x7684;&#x5DE5;&#x5177;&#x548C;&#x6269;&#x5C55;&#x662F;&#x56F4;&#x7ED5;API&#x6784;&#x5EFA;&#x7684;&#x3002;</p>
+<p>&#x201C;&#x540C;&#x6837;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x504F;&#x79BB;Linux&#x662F;&#x6CA1;&#x6709;&#x610F;&#x4E49;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x662F;&#x5982;&#x6B64;&#x7684;&#x6807;&#x51C6;&#xFF0C;&#x201D;Ghods&#x8BF4;&#xFF0C;&#x201C;&#x6211;&#x8BA4;&#x4E3A;Kubernetes&#x6B63;&#x5728;&#x8D70;&#x76F8;&#x540C;&#x7684;&#x9053;&#x8DEF;&#x3002;&#x73B0;&#x5728;&#x8FD8;&#x5904;&#x4E8E;&#x65E9;&#x671F;&#x9636;&#x6BB5; &#x2014;&#x2014;&#x6587;&#x6863;&#x4ECD;&#x7136;&#x9700;&#x8981;&#x5DE5;&#x4F5C;&#xFF0C;&#x7528;&#x4E8E;&#x7F16;&#x5199;&#x548C;&#x53D1;&#x5E03;YAML&#x5230;Kubernetes&#x96C6;&#x7FA4;&#x7684;&#x7528;&#x6237;&#x4F53;&#x9A8C;&#x4ECD;&#x7136;&#x5F88;&#x8270;&#x96BE;&#x3002;&#x5F53;&#x4F60;&#x5904;&#x4E8E;&#x6F6E;&#x6D41;&#x6700;&#x524D;&#x7EBF;&#x65F6;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x505A;&#x51FA;&#x4E00;&#x4E9B;&#x727A;&#x7272;&#x3002;&#x4F46;&#x5E95;&#x7EBF;&#x662F;&#xFF0C;&#x8FD9;&#x662F;&#x884C;&#x4E1A;&#x53D1;&#x5C55;&#x7684;&#x65B9;&#x5411;&#x3002;&#x4ECE;&#x73B0;&#x5728;&#x5F00;&#x59CB;&#x7684;&#x4E09;&#x5230;&#x4E94;&#x5E74;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x8FD8;&#x4F1A;&#x4EE5;&#x5176;&#x4ED6;&#x65B9;&#x5F0F;&#x8FD0;&#x884C;&#x57FA;&#x7840;&#x67B6;&#x6784;&#xFF0C;&#x90A3;&#x4E48;&#x771F;&#x7684;&#x4F1A;&#x8BA9;&#x4EBA;&#x975E;&#x5E38;&#x9707;&#x60CA;&#x3002;&#x201C;</p>
+<footer class="page-footer"><span class="copyright"><p><a href="https://tva1.sinaimg.cn/large/006y8mN6ly1g7vf4p12rpj30u01hdjwp.jpg" data-lightbox="2fd927ee-fa64-4eca-8ed5-6bd72b573rfe" target="_blank">&#x6781;&#x5BA2;&#x65F6;&#x95F4;&#x4E13;&#x680F;&#x63A8;&#x8350;&#x300A;&#x6DF1;&#x5165;&#x5256;&#x6790; Kubernetes&#x300B;</a> | <a href="https://tva1.sinaimg.cn/large/006y8mN6ly1g7vew6rqmvj304g056weg.jpg" data-lightbox="2fd927ee-fa64-4eca-8ed5-6bd72b573a3c" target="_blank">&#x70B9;&#x51FB;&#x5173;&#x6CE8;&#x3010;&#x4E91;&#x539F;&#x751F;&#x5E94;&#x7528;&#x67B6;&#x6784;&#x3011;&#x516C;&#x4F17;&#x53F7;&#x56DE;&#x590D;&#x3010;&#x52A0;&#x7FA4;&#x3011;&#x52A0;&#x5165;&#x4E91;&#x539F;&#x751F;&#x793E;&#x533A;</a></p>Copyright &#xA9; 2017-2020 | Distributed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">CC BY 4.0</a> | <a href="https://jimmysong.io" target="_blank">jimmysong.io</a> all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification"> Updated at 
+2020-02-12 21:55:28
+</span></footer></body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="appendix-b-lock-in.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 附录B 锁定">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"附录C Box：案例研究","level":"1.15","depth":1,"previous":{"title":"附录B 锁定","level":"1.14","depth":1,"path":"appendix-b-lock-in.md","ref":"appendix-b-lock-in.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","codesnippet","splitter","page-toc-button","editlink","back-to-top-button","-lunr","-search","search-plus","github-buttons@2.1.0","favicon@^0.0.2","tbfed-pagefooter@^0.0.1","3-ba","theme-default","-highlight","prism","prism-themes","sitemap-general","ga","lightbox"],"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"<p><a href=https://tva1.sinaimg.cn/large/006y8mN6ly1g7vf4p12rpj30u01hdjwp.jpg data-lightbox=2fd927ee-fa64-4eca-8ed5-6bd72b573rfe>极客时间专栏推荐《深入剖析 Kubernetes》</a> | <a href=https://tva1.sinaimg.cn/large/006y8mN6ly1g7vew6rqmvj304g056weg.jpg data-lightbox=2fd927ee-fa64-4eca-8ed5-6bd72b573a3c>点击关注【云原生应用架构】公众号回复【加群】加入云原生社区</a></p>Copyright © 2017-2020 | Distributed under <a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh>CC BY 4.0</a> | <a href=https://jimmysong.io>jimmysong.io</a>","modify_label":" Updated at ","modify_format":"YYYY-MM-DD HH:mm:ss"},"prism":{"css":["prism-themes/themes/prism-ghcolors.css"]},"github":{"url":"https://github.com/rootsongjc/cloud-native-infra"},"editlink":{"label":"编辑此页","multilingual":false,"base":"https://github.com/rootsongjc/cloud-native-infra/blob/master"},"splitter":{},"codesnippet":{},"sitemap-general":{"prefix":"https://jimmysong.io/cloud-native-infra"},"fontsettings":{"theme":"white","family":"sans","size":2},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"prism-themes":{},"github-buttons":{"repo":"rootsongjc/cloud-native-infra","types":["star"],"size":"small"},"3-ba":{"configuration":"auto","token":"11f7d254cfa4e0ca44b175c66d379ecc"},"ga":{"configuration":"auto","token":"UA-93485976-1"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}},"search-plus":{},"image-captions":{"caption":"图片 - _CAPTION_"}},"theme":"default","author":"宋净超（Jimmy Song）","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"云原生基础架构","language":"zh-hans","links":{"sidebar":{"回到主页":"https://jimmysong.io"}},"gitbook":"*","description":"云原生基础架构|Cloud Native Infrastructure 中文版"},"file":{"path":"appendix-c-box-case-study.md","mtime":"2020-02-12T13:55:28.881Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-12T13:56:36.132Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lightbox/jquery.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lightbox/lightbox.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

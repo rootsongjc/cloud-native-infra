@@ -12,4 +12,7 @@
 <url> <loc>https://jimmysong.io/managing-cloud-native-applications.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://jimmysong.io/securing-applications.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 <url> <loc>https://jimmysong.io/implementing-cloud-native-infrasctructure.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://jimmysong.io/appendix-a-patterns-for-network-resiilency.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://jimmysong.io/appendix-b-lock-in.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://jimmysong.io/appendix-c-box-case-study.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
 </urlset>
