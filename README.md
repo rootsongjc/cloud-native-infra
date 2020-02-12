@@ -1,6 +1,6 @@
 # 云原生基础架构
 
-《云原生基础架构》——Cloud Native Infrastructure 中文版。
+《云原生基础架构》，Cloud Native Infrastructure 中文版。
 
 <p align="center">
   <a href="https://jimmysong.io/cloud-native-infra">

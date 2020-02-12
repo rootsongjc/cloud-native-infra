@@ -12,3 +12,7 @@
 - [第7章 管理云原生应用程序](managing-cloud-native-applications.md)
 - [第8章 保护应用程序](securing-applications.md)
 - [第9章 实施云原生基础架构](implementing-cloud-native-infrasctructure.md)
+- [附录A 网络弹性模式](appendix-a-patterns-for-network-resiilency.md)
+- [附录B 锁定](appendix-b-lock-in.md)
+- [附录C Box：案例研究](appendix-c-box-case-study.md)
+
