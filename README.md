@@ -35,9 +35,9 @@
 
 [点击加入云原生社区](https://jimmysong.io/contact)
 
-## License
+## 免责声明
 
-本书英文版版权属于 O’Reilly，中文版版权归属于机械工业出版，基于[署名-非商业性使用-相同方式共享 4.0（CC BY-NC-SA 4.0）](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)分享，本书为本人自行翻译，目的在于学习和巩固云原生知识，如有需要请[购买纸质书](https://item.jd.com/12432007.html)。
+本书英文版版权属于 O’Reilly，中文版版权归属于机械工业出版，基于[署名-非商业性使用-相同方式共享 4.0（CC BY-NC-SA 4.0）](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)分享，本书为云原生爱好者翻译，仅可用于学习和交流目的，请勿私自印制贩卖，如有需要请[购买纸质书](https://item.jd.com/12432007.html)。
 
 <p align="left">
   <img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g7m9ofbzirj302g00vq2p.jpg" alt="CC4 License"/>
