@@ -24,8 +24,7 @@
 
 - GitHub地址：https://github.com/rootsongjc/cloud-native-infra
 - GitBook在线浏览：https://jimmysong.io/cloud-native-infra
-
-英文原版下载地址：<https://go.heptio.com/cloud-native-infrastructure>
+- 下载离线版：https://github.com/rootsongjc/cloud-native-infra/releases/tag/v20200214
 
 ## 鸣谢
 
