@@ -32,7 +32,7 @@
 
 ## 社区
 
-[点击加入云原生社区](https://jimmysong.io/contact)
+[加入云原生社区](https://cloudnative.to/contact)
 
 ## 免责声明
 
