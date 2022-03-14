@@ -3,10 +3,11 @@
 《云原生基础架构》，Cloud Native Infrastructure 中文版。
 
 <p align="center">
-  <a href="https://jimmysong.io/cloud-native-infra">
-    <img src="cover.jpg" width="50%" height="50%" alt="《云原生基础架构》by Jimmy Song(宋净超）">
+  <a href="https://jimmysong.io/cloud-native-infra/">
+    <img src="cover-thumbnail.jpg" title="《云原生基础架构》" alt="《云原生基础架构》by Jimmy Song(宋净超）">
   </a>
 </p>
+
 
 本书为*Cloud Native Infrastructure*中文版，作者*Justin Garrison*和*Kris Nova*，英文版发行于 2017 年 11 月，已可以在网上免费获得，本书是关于创建和管理基础架构，以适用于云原生应用全生命周期管理的模式和实践。
 
@@ -22,22 +23,27 @@
 
 您可以通过以下方式使用本书：
 
-- GitHub地址：https://github.com/rootsongjc/cloud-native-infra
-- GitBook在线浏览：https://jimmysong.io/cloud-native-infra
-- 下载离线版：https://github.com/rootsongjc/cloud-native-infra/releases/tag/v20200214
+- GitHub地址：<https://github.com/rootsongjc/cloud-native-infra>
+- GitBook在线浏览：<https://jimmysong.io/cloud-native-infra/>
+- 下载离线版：<https://github.com/rootsongjc/cloud-native-infra/releases/>
 
 ## 鸣谢
 
 本仓库基于 <https://github.com/CloudNativeInfra/cni> 编写，感谢原仓库贡献者的内容组织和翻译。
 
-## 社区
-
-[加入云原生社区](https://cloudnative.to/contact)
-
 ## 免责声明
 
 本书英文版版权属于 O’Reilly，中文版版权归属于机械工业出版，基于[署名-非商业性使用-相同方式共享 4.0（CC BY-NC-SA 4.0）](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)分享，本书为云原生爱好者翻译，仅可用于学习和交流目的，请勿私自印制贩卖，如有需要请[购买纸质书](https://item.jd.com/12432007.html)。
 
-<p align="left">
-  <img src="https://tva1.sinaimg.cn/large/006y8mN6ly1g7m9ofbzirj302g00vq2p.jpg" alt="CC4 License"/>
+## 云原生社区
+
+<p align="center">
+  <a href="https://cloudnative.to">
+    <img src="./images/github-banner.jpg" alt="加入云原生社区" title="加入云原生社区">
+  </a>
 </p>
+
+
+云原生社区是中国最大的独立第三方云原生终端用户和泛开发者社区，由 CNCF 大使、开源意见领袖共同发起成立于 2020 年 5 月 12 日，提供云原生专业资讯，促进云原生产业发展。
+
+官方网站 <https://cloudnative.to>，关注云原生社区微信公众号，[申请加入社区](https://mp.weixin.qq.com/s/vWlSdzz2MNdXRr0sd2-LFg)。

@@ -5,7 +5,10 @@
     "author": "宋净超（Jimmy Song）",
     "links": {
         "sidebar": {
-            "回到主页": "https://jimmysong.io"
+            "回到主页": "https://jimmysong.io",
+            "Kubernetes 中文指南": "https://jimmysong.io/kubernetes-handbook/",
+            "云原生开源项目大全": "https://jimmysong.io/awesome-cloud-native/",
+            "云原生社区": "https://cloudnative.to"
         }
     },
     "plugins": [
@@ -40,10 +43,11 @@
             "size": "small"
         },
         "image-captions": {
-             "caption": "图片 - _CAPTION_"
+             "caption": "图 _PAGE_LEVEL_._PAGE_IMAGE_NUMBER_：_CAPTION_"
         },
         "tbfed-pagefooter": {
-            "copyright": "<a href=https://cloudnative.to/contact/>欢迎加入云原生社区</a></p>Copyright © 2017-2020 | Distributed under <a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh>CC BY 4.0</a> | <a href=https://jimmysong.io>jimmysong.io</a>",            "modify_label": " Updated at ",
+            "copyright": "Copyright © 2017-2022 | Distributed under CC BY 4.0 | <a href=https://jimmysong.io>jimmysong.io</a>",
+            "modify_label": " Updated at ",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
         "favicon": {
@@ -63,6 +67,20 @@
         },
         "ga": {
             "token": "UA-93485976-1"
-        }
+        },
+        "hide-element": {
+            "elements": [".gitbook-link"]
+        },
+        "insert-logo": {
+            "url": "https://jimmysong.io/images/logo-black-text.png",
+            "style": "background: none; max-height: 100px; min-height: 30px"
+        },
+        "adsense": {
+            "client": "ca-pub-4029167986768912",
+            "slot": "2445941692",
+            "format": "auto",
+            "element": ".page-inner section",
+            "position": "bottom"
+      }
     }
 }
