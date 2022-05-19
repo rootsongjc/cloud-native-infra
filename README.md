@@ -1,13 +1,8 @@
+**本仓库已停止维护，内容迁移至[云原生资料库](https://github.com/rootsongjc/docs)，请转至[新页面](https://jimmysong.io/docs/cloud-native-infra/)浏览**。
+
 # 云原生基础架构
 
 《云原生基础架构》，Cloud Native Infrastructure 中文版。
-
-<p align="center">
-  <a href="https://jimmysong.io/cloud-native-infra/">
-    <img src="cover-thumbnail.jpg" title="《云原生基础架构》" alt="《云原生基础架构》by Jimmy Song(宋净超）">
-  </a>
-</p>
-
 
 本书为*Cloud Native Infrastructure*中文版，作者*Justin Garrison*和*Kris Nova*，英文版发行于 2017 年 11 月，已可以在网上免费获得，本书是关于创建和管理基础架构，以适用于云原生应用全生命周期管理的模式和实践。
 
@@ -18,18 +13,6 @@
 - 了解部署和管理基础架构和应用程序的模式
 - 设计测试以证明您的基础架构可以按预期工作，即使在各种边缘情况下也是如此
 - 了解如何以策略即代码的方式保护基础架构
-
-### 使用方式
-
-您可以通过以下方式使用本书：
-
-- GitHub地址：<https://github.com/rootsongjc/cloud-native-infra>
-- GitBook在线浏览：<https://jimmysong.io/cloud-native-infra/>
-- 下载离线版：<https://github.com/rootsongjc/cloud-native-infra/releases/>
-
-## 鸣谢
-
-本仓库基于 <https://github.com/CloudNativeInfra/cni> 编写，感谢原仓库贡献者的内容组织和翻译。
 
 ## 免责声明
 
@@ -42,8 +25,6 @@
     <img src="./images/github-banner.jpg" alt="加入云原生社区" title="加入云原生社区">
   </a>
 </p>
-
-
 云原生社区是中国最大的独立第三方云原生终端用户和泛开发者社区，由 CNCF 大使、开源意见领袖共同发起成立于 2020 年 5 月 12 日，提供云原生专业资讯，促进云原生产业发展。
 
 官方网站 <https://cloudnative.to>，关注云原生社区微信公众号，[申请加入社区](https://mp.weixin.qq.com/s/vWlSdzz2MNdXRr0sd2-LFg)。
