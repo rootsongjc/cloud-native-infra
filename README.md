@@ -1,4 +1,4 @@
-**本仓库已停止维护，内容迁移至[云原生资料库](https://github.com/rootsongjc/docs)，请转至[新页面](https://jimmysong.io/docs/cloud-native-infra/)浏览**。
+**本仓库已停止维护，内容迁移至[云原生资料库](https://github.com/rootsongjc/cloud-native-library/)，请转至[新页面](https://lib.jimmysong.io/cloud-native-infra/)浏览**。
 
 # 云原生基础架构
 
